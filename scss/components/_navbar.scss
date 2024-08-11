@@ -1,0 +1,80 @@
+@use '../custom' as *; 
+
+#main-nav {
+
+
+.nav-link:first-child {
+    padding-left:0!important;
+}
+
+.navbar {
+
+ 
+
+    @media (max-width: 1200px) { 
+        width:100%;
+        display:block;
+        margin:auto;
+        text-align:center;
+     
+        
+       }
+}
+
+a.nav-link {
+    font-weight:200;
+    font-size: 18px;
+    margin-right:20px;
+    text-transform:uppercase;
+    position:relative;
+
+    @media (max-width: 992px) { 
+       width:100%;
+    
+       
+      }
+
+    &.social {
+        margin-right:5px;
+    }
+
+    &.active {
+        
+
+        &:after {
+
+            position: absolute;
+          bottom: 0px;
+          content: " ";
+          width:90%;
+          background:$primary;
+          height:2px;
+          left:0%;
+          right:0%;
+
+          @media (max-width: 1200px) { 
+            width:20%;
+            left:40%;
+            right:0%;
+           }
+        }
+
+       
+    }
+
+    
+
+}
+
+
+.nav-tab {
+    border:none;
+}
+
+
+
+.navbar {
+    margin-top:15px;
+    margin-bottom:30px;
+}
+}

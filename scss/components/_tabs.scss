@@ -1,0 +1,46 @@
+@use '../custom' as *;
+
+#Bt-tabs {
+    .button {
+        font-family: $display-font-family;
+       
+    }
+.nav-link {
+    padding:30px;
+border:none;
+    font-family: $display-font-family;
+    position:relative;
+   color:$primary;
+   font-size:20px;
+   font-weight:100;
+
+
+    &.active {
+        font-weight:700!important;
+      
+        
+        &:after {
+
+            position: absolute;
+          bottom: 10px;
+          content: " ";
+          width:80%;
+          background:$primary;
+          height:2px;
+          left:10%;
+          right:10%;
+        }
+    }
+}
+
+.nav-tabs {
+    border:none;
+}
+
+.tab-content {
+    border:none;
+}
+.tab-pane {
+    margin-top:30px;
+}
+}
