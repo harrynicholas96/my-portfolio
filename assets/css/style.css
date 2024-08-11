@@ -11900,18 +11900,33 @@ h1 {
   font-size: 36px;
   position: relative;
 }
+h1:after {
+  position: absolute;
+  bottom: -15px;
+  content: " ";
+  width: 1px;
+  background: #666666;
+  height: 110%;
+  left: 375px;
+  right: 0px;
+}
+@media (max-width: 768px) {
+  h1:after {
+    display: none;
+  }
+}
 h1 span {
   font-size: 23px;
   font-weight: 700;
 }
+@media (max-width: 767px) {
+  h1 span.desk-only {
+    display: none;
+  }
+}
 @media (max-width: 467px) {
   h1 {
     font-size: 30px;
-  }
-}
-@media (max-width: 420px) {
-  h1 {
-    font-size: 25px;
   }
 }
 
@@ -11964,6 +11979,9 @@ a.back-link:hover {
   text-transform: uppercase;
   position: relative;
 }
+#main-nav a.nav-link:hover {
+  font-weight: 300;
+}
 @media (max-width: 992px) {
   #main-nav a.nav-link {
     width: 100%;
@@ -11999,6 +12017,16 @@ a.back-link:hover {
 
 footer {
   text-align: right;
+}
+
+.mob-only {
+  display: none;
+}
+@media (max-width: 992px) {
+  .mob-only {
+    display: block;
+    margin-bottom: 15px;
+  }
 }
 
 .heading-wrapper {
@@ -12409,7 +12437,7 @@ section.image {
   section.image {
     background-size: 50%;
     background-position: center;
-    background-image: url("../img/migration-bg-mob.png");
+    background: #ffffff;
   }
 }
 section.simpleselector {
@@ -12427,7 +12455,7 @@ section.simpleselector {
   section.simpleselector {
     background-size: 100%;
     background-position: center;
-    background-image: url("../img/simpleselector-bg-mob.png");
+    background: #ffffff;
   }
 }
 section.hub {
@@ -12445,7 +12473,7 @@ section.hub {
   section.hub {
     background-size: 100%;
     background-position: center;
-    background-image: url("../img/hub-bg-mob.png");
+    background: #ffffff;
   }
 }
 section.blue {

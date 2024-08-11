@@ -27,6 +27,11 @@ a.nav-link {
     margin-right:20px;
     text-transform:uppercase;
     position:relative;
+ 
+
+    &:hover {
+        font-weight:300;
+    }
 
     @media (max-width: 992px) { 
        width:100%;
