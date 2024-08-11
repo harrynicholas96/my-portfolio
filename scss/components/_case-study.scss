@@ -10,7 +10,7 @@ section {
 
   &.image {
 /* The image used */
-background-image: url("../img/migration-bg.png");
+background-image: url("assets/img/migration-bg.png");
 
 
 
@@ -26,14 +26,14 @@ background-size: 30%;
 @media (max-width: 992px) { 
   background-size: 50%;
   background-position: center;
-  background-image: url("../img/migration-bg-mob.png");
+  background-image: url("assets/img/migration-bg-mob.png");
 
  
 }
 }
 &.simpleselector {
   /* The image used */
-  background-image: url("../img/simpleselector-bg.png");
+  background-image: url("assets/img/simpleselector-bg.png");
   
   
   
@@ -49,14 +49,14 @@ background-size: 30%;
   @media (max-width: 992px) { 
     background-size: 100%;
     background-position: center;
-    background-image: url("../img/simpleselector-bg-mob.png");
+    background-image: url("assets/img/simpleselector-bg-mob.png");
 
    
   }
   }
   &.hub {
     /* The image used */
-    background-image: url("../img/hub-bg.png");
+    background-image: url("assets/img/hub-bg.png");
     
     
     
