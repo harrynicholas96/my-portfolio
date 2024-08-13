@@ -24,13 +24,22 @@ margin-bottom:70px;
         display:inline;
         float:left;
         height:90px;
-        margin-right:40px;
+        margin-right:25px;
        
     }
 
     h1 {
         padding-top:20px;
+
+        @media (max-width: 407px) { 
+          display:block;
+          float:right;
+          margin-bottom:30px;
+             
+            }
     }
+
+   
   }
   
 

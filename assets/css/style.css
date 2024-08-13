@@ -11907,7 +11907,7 @@ h1:after {
   width: 1px;
   background: #666666;
   height: 110%;
-  left: 375px;
+  left: 360px;
   right: 0px;
 }
 @media (max-width: 768px) {
@@ -12036,10 +12036,17 @@ footer {
   display: inline;
   float: left;
   height: 90px;
-  margin-right: 40px;
+  margin-right: 25px;
 }
 .heading-wrapper h1 {
   padding-top: 20px;
+}
+@media (max-width: 407px) {
+  .heading-wrapper h1 {
+    display: block;
+    float: right;
+    margin-bottom: 30px;
+  }
 }
 
 .tile {
