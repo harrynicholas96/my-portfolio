@@ -11972,6 +11972,11 @@ a.back-link:hover {
     text-align: center;
   }
 }
+@media (max-width: 407px) {
+  #main-nav .navbar {
+    margin-bottom: 0 !important;
+  }
+}
 #main-nav a.nav-link {
   font-weight: 200;
   font-size: 18px;
@@ -12037,6 +12042,11 @@ footer {
   float: left;
   height: 90px;
   margin-right: 25px;
+}
+@media (max-width: 407px) {
+  .heading-wrapper {
+    margin-bottom: 20px;
+  }
 }
 .heading-wrapper h1 {
   padding-top: 20px;

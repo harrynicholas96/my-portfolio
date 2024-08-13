@@ -227,7 +227,7 @@
               /* If the element is already in the viewport, fade it in */
               if (bottom_of_window >= top_of_object && top_of_window <= bottom_of_object) {
                 $(this).animate({'opacity':'1'}, 1000);
-              } else if (bottom_of_window >= top_of_object + 400) {
+              } else if (bottom_of_window >= top_of_object + 100) {
                 /* If the first 400px of the element is visible, fade it in */
                 $(this).animate({'opacity':'1'}, 1000);
               }
