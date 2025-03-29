@@ -27,7 +27,16 @@ ul.list {
 
 p {
     font-weight:300;
-    font-size:16px;
+    font-size:18px;
+    
+
+    &.stat  {
+        font-size:60px;
+        font-family:$condensed-font-family;
+        font-weight:700;
+        line-height:57px;
+        margin-bottom:0;
+    }
 
     &.note {
         font-size:14px;
@@ -36,7 +45,7 @@ p {
 
     strong {
         font-weight:700;
-        color:#666666;
+        color:#444444;
     }
 }
 h2 {
@@ -49,10 +58,11 @@ h2 {
 }
 h1 {
 
-    color: $primary;
+    color: #666666;
     font-weight:100;
-    font-size:36px;
+    font-size:40px;
 position:relative;
+font-family: $signature-font-family;
 
 
 &:after {
@@ -63,7 +73,7 @@ position:relative;
   width:1px;
   background:$primary;
   height:110%;
-  left:360px;
+  left:355px;
   right:0px;
 
   @media (max-width: 768px) { 
@@ -76,8 +86,8 @@ position:relative;
 
     span {
         font-size:23px;
-
-        font-weight:700;
+        font-family: $display-font-family;
+        font-weight:300;
 
         
     }
@@ -100,9 +110,20 @@ position:relative;
 h3 {
 
     color: $primary;
-    font-weight:100;
-    font-size:36px;
+    font-weight:700;
+    font-size:54px;
     margin-bottom:25px;
+    text-transform:uppercase;
+    font-family: $condensed-font-family;
+   
+
+    span {
+        text-transform:none;
+        font-weight:300;
+        font-size:16px;
+        
+    }
+
   
 }
 h4 {
@@ -110,6 +131,7 @@ h4 {
     color: $primary;
     font-weight:300;
     font-size:25px;
+    font-family:$condensed-font-family;
     margin-bottom:25px;
   
 }
