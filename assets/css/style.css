@@ -11949,6 +11949,11 @@ h3 {
   text-transform: uppercase;
   font-family: "Roboto Condensed", sans-serif;
 }
+@media (max-width: 410px) {
+  h3 {
+    font-size: 44px;
+  }
+}
 h3 span {
   text-transform: none;
   font-weight: 300;
@@ -12244,6 +12249,11 @@ footer.fixed {
   bottom: 0;
   width: 100%;
 }
+@media (max-width: 992px) {
+  footer.fixed {
+    position: relative;
+  }
+}
 footer p {
   margin-bottom: 0;
 }
@@ -12290,6 +12300,11 @@ footer p {
 .tile-wrapper {
   position: relative;
   display: block;
+}
+@media (max-width: 992px) {
+  .tile-wrapper {
+    margin-bottom: 20px;
+  }
 }
 .tile-wrapper p {
   margin: 0;
@@ -12778,6 +12793,13 @@ section.halfhalfpurp h4 {
 section.halfhalfpurp img {
   margin-bottom: 20px;
   height: 300px;
+  width: auto;
+}
+@media (max-width: 1200px) {
+  section.halfhalfpurp img {
+    height: auto;
+    width: 100%;
+  }
 }
 section.halfhalfpurp.pink {
   background: linear-gradient(to right, #EDECF8 0%, #ffffff 50%, #fff 50%, #EDECF8 100%);
