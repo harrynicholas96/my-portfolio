@@ -9,7 +9,7 @@
 
 .navbar {
 
- 
+
 
     @media (max-width: 1200px) { 
         width:100%;
@@ -28,12 +28,13 @@
 }
 
 a.nav-link {
-    font-weight:200;
-    font-size: 18px;
+    font-weight:300;
+    font-size: 21px;
     margin-right:20px;
-    text-transform:uppercase;
+   
     position:relative;
     transition: ease all 0.3s;
+
  
 
     &:hover {
@@ -53,7 +54,7 @@ a.nav-link {
     &.active {
         
         font-weight:300;
-
+        color:#000000;
         &:after {
 
             position: absolute;
@@ -87,7 +88,11 @@ a.nav-link {
 
 
 .navbar {
-    margin-top:15px;
+    float:right;
+    padding-top:15px;
     margin-bottom:30px;
+  
+   
 }
+
 }

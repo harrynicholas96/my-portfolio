@@ -11893,42 +11893,52 @@ p.note {
 }
 p strong {
   font-weight: 700;
-  color: #444444;
 }
 
 h2 {
   color: #444444;
-  font-weight: 100;
+  font-weight: 300;
   font-size: 42px;
   margin-bottom: 30px;
 }
 
 h1 {
-  color: #666666;
-  font-weight: 100;
-  font-size: 40px;
+  color: #444444;
+  font-weight: 900;
+  font-size: 52px;
+  text-transform: uppercase;
   position: relative;
-  font-family: "Niconne", cursive;
-}
-h1:after {
-  position: absolute;
-  bottom: -15px;
-  content: " ";
-  width: 1px;
-  background: #444444;
-  height: 110%;
-  left: 355px;
-  right: 0px;
-}
-@media (max-width: 768px) {
-  h1:after {
-    display: none;
-  }
-}
-h1 span {
-  font-size: 23px;
   font-family: "Roboto", sans-serif;
+  margin-bottom: 25px;
+}
+h1 span .rotating-text {
   font-weight: 300;
+  transform: translateY(20px);
+}
+h1 span .rotating-text p {
+  display: inline-flex;
+  margin: 0;
+  vertical-align: top;
+  font-size: 26px;
+  text-transform: none;
+}
+h1 span .rotating-text p .word {
+  position: absolute;
+  display: flex;
+  opacity: 0;
+}
+h1 span .rotating-text p .word .letter {
+  transform-origin: center center 25px;
+}
+h1 span .rotating-text p .word .letter.out {
+  transform: rotateX(90deg);
+  transition: 0.32s cubic-bezier(0.6, 0, 0.7, 0.2);
+}
+h1 span .rotating-text p .word .letter.in {
+  transition: 0.38s ease;
+}
+h1 span .rotating-text p .word .letter.behind {
+  transform: rotateX(-90deg);
 }
 @media (max-width: 767px) {
   h1 span.desk-only {
@@ -11977,12 +11987,12 @@ li {
 }
 
 a.back-link {
-  color: #000000 !important;
+  color: #000000;
   font-weight: 700;
   text-decoration: underline;
 }
 a.back-link:hover {
-  color: #666666 !important;
+  color: #666666;
 }
 
 #main-nav .nav-link:first-child {
@@ -12002,10 +12012,9 @@ a.back-link:hover {
   }
 }
 #main-nav a.nav-link {
-  font-weight: 200;
-  font-size: 18px;
+  font-weight: 300;
+  font-size: 21px;
   margin-right: 20px;
-  text-transform: uppercase;
   position: relative;
   transition: ease all 0.3s;
 }
@@ -12022,6 +12031,7 @@ a.back-link:hover {
 }
 #main-nav a.nav-link.active {
   font-weight: 300;
+  color: #000000;
 }
 #main-nav a.nav-link.active:after {
   position: absolute;
@@ -12044,8 +12054,56 @@ a.back-link:hover {
   border: none;
 }
 #main-nav .navbar {
-  margin-top: 15px;
+  float: right;
+  padding-top: 15px;
   margin-bottom: 30px;
+}
+
+.home {
+  background: linear-gradient(170deg, rgba(147, 189, 156, 0.87) 45%, #fff 0);
+  min-height: 100vh;
+}
+
+section.lightgrey {
+  background: #FFF;
+  background: linear-gradient(360deg, rgb(255, 255, 255) 50%, rgb(244, 244, 244) 100%);
+}
+
+.headinfo {
+  margin-top: 120px;
+}
+.headinfo img {
+  max-height: 450px;
+}
+@media (min-width: 1340px) {
+  .headinfo img {
+    max-height: 450px;
+    width: auto;
+  }
+}
+@media (min-width: 1200px) {
+  .headinfo img {
+    max-height: 450px;
+    width: auto;
+  }
+}
+@media (min-width: 998px) {
+  .headinfo img {
+    max-height: 450px;
+    width: auto;
+  }
+}
+.headinfo p {
+  font-size: 23px;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+#case-studies {
+  scroll-margin-top: 50px;
+}
+
+.mt-45 {
+  margin-top: 20px;
 }
 
 .about-box2 {
@@ -12061,7 +12119,7 @@ footer {
   text-align: right;
 }
 footer p {
-  font-family: "Roboto Condensed", sans-serif;
+  font-size: 22px;
 }
 
 .mob-only {
@@ -12084,24 +12142,25 @@ footer p {
 }
 
 .heading-wrapper {
-  margin-bottom: 70px;
+  padding-top: 10px;
 }
 .heading-wrapper img {
   display: inline;
   float: left;
-  height: 90px;
-  margin-right: 25px;
+  height: 300px;
+  margin-right: 45px;
+  margin-bottom: 50px;
 }
 @media (max-width: 407px) {
   .heading-wrapper {
     margin-bottom: 20px;
   }
 }
-.heading-wrapper h1 {
-  padding-top: 20px;
+.heading-wrapper .sub-wrapper {
+  padding-top: 40px;
 }
 @media (max-width: 407px) {
-  .heading-wrapper h1 {
+  .heading-wrapper .sub-wrapper h1 {
     display: block;
     float: right;
     margin-bottom: 30px;
@@ -12116,6 +12175,11 @@ footer p {
   margin: 1em 0;
   border: solid 1px #dddddd;
   overflow: hidden;
+  border-radius: 8px;
+  background: #fff;
+}
+.tile:hover {
+  border: solid 1px #333333;
 }
 .tile h3 {
   font-size: 20px;
@@ -12266,25 +12330,67 @@ footer p {
 }
 
 .btn-primary {
-  background: #ffffff;
-  color: #444444;
+  background: rgba(255, 255, 255, 0.8);
+  color: #333333;
   padding: 12px 25px;
-  border: solid 2px #444444;
-  font-size: 18px;
+  border: solid 2px #333333;
+  font-size: 21px;
   font-weight: 300;
   transition: ease-in all 0.2s;
 }
 .btn-primary a {
   color: #444444;
   text-decoration: none;
+  display: block;
 }
 .btn-primary a:hover {
   color: #ffffff;
 }
+.btn-primary.large {
+  font-size: 24px;
+  background: none;
+  font-weight: 700;
+  font-family: "Roboto Condensed", sans-serif;
+}
+.btn-primary.nav-button {
+  font-size: 21px;
+  padding: 8px 18px;
+  background: #333333;
+  color: #eeeeee;
+}
+.btn-primary.nav-button i {
+  color: #eeeeee;
+}
+.btn-primary.nav-button:hover {
+  color: #333333;
+  background: #eeeeee;
+}
+.btn-primary.nav-button:hover i {
+  color: #333333;
+}
+.btn-primary.dark {
+  border: solid 3px #eeeeee;
+  color: #444444;
+  background: #eeeeee;
+}
+.btn-primary.dark:hover {
+  background: #637c69;
+  border: solid 3px #637c69;
+  color: #010101;
+  font-weight: 700;
+  font-family: "Roboto Condensed", sans-serif;
+}
+.btn-primary.dark:hover i {
+  color: #010101;
+}
+.btn-primary.dark i {
+  color: #444444;
+  font-size: 28px;
+}
 .btn-primary:hover {
-  background: #444444;
+  background: #333333;
   color: #ffffff;
-  border: solid 2px #444444;
+  border: solid 2px #333333;
 }
 .btn-primary:hover i {
   color: #ffffff;
@@ -12292,9 +12398,9 @@ footer p {
 }
 .btn-primary i {
   transition: ease-in all 0.2s;
-  font-size: 18px;
-  margin-right: 5px;
-  color: #444444;
+  font-size: 21px;
+  margin-right: 6px;
+  color: #333333;
 }
 
 .tile-wrapper {
@@ -12308,18 +12414,17 @@ footer p {
 }
 .tile-wrapper p {
   margin: 0;
-  color: #fff;
+  color: #222222;
   text-align: right;
-  background: rgb(130, 201, 186);
-  background: linear-gradient(90deg, rgb(130, 201, 186) 0%, rgb(88, 159, 144) 100%);
-  padding: 7px 20px;
+  background: #a1c6a9;
   display: block;
   border-radius: 8px 8px 0px 8px;
   font-family: "Roboto Condensed", sans-serif;
-  font-weight: 500;
+  padding: 3px 12px;
+  font-weight: 700;
   font-size: 18px;
   position: absolute;
-  top: -20px;
+  top: -15px;
   right: 0%;
   z-index: 2;
 }
@@ -12342,10 +12447,10 @@ footer p {
   opacity: 0.99;
   overflow: hidden;
   position: relative;
-  border-radius: 3px;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.05);
   padding: 30px;
   transition: ease-in all 0.5s;
+  border-radius: 8px;
   left: 0%;
   right: 0%;
 }
@@ -12486,7 +12591,7 @@ footer p {
   position: relative;
   color: #444444;
   font-size: 20px;
-  font-weight: 100;
+  font-weight: 300;
 }
 #Bt-tabs .nav-link.active {
   font-weight: 700 !important;
@@ -12514,13 +12619,26 @@ footer p {
 .container.seethru {
   background-color: rgba(255, 255, 255, 0.1) !important;
 }
+@media (min-width: 1340px) {
+  .container.squeeze {
+    max-width: 100%;
+    padding-left: 16%;
+    padding-right: 2%;
+  }
+}
 
 section {
   padding: 50px 0px;
 }
+@media (min-width: 1200px) {
+  section {
+    padding: 100px 0px;
+  }
+}
 section.case-head .logo-lockup {
   margin-bottom: 20px;
   padding-left: 20px;
+  width: 100%;
 }
 section.case-head .logo-lockup p {
   font-family: "Roboto Condensed", sans-serif;
@@ -12649,7 +12767,7 @@ section.grey .hifi {
 section.grey h4 {
   text-align: right;
   font-size: 44px;
-  font-weight: 100;
+  font-weight: 300;
   margin-bottom: 25px;
   color: #666;
   text-transform: uppercase;
@@ -12679,7 +12797,7 @@ section.yellow {
 section.yellow h4 {
   text-align: left;
   font-size: 44px;
-  font-weight: 100;
+  font-weight: 300;
   margin-bottom: 25px;
   color: #666;
   text-transform: uppercase;
@@ -12690,7 +12808,7 @@ section.yellow .heading-wrap {
 section.yellow .heading-wrap p {
   color: #444444;
   font-size: 20px;
-  font-weight: 100;
+  font-weight: 300;
   margin-bottom: 0;
   text-align: left;
 }
@@ -12717,7 +12835,7 @@ section.wins h4 {
 section.wins p {
   font-size: 22px;
   color: #eeeeee;
-  font-weight: 100;
+  font-weight: 300;
 }
 section.wins p.stat {
   font-size: 60px;
@@ -12730,7 +12848,7 @@ section.wins p.stat {
 section.wins .win-stat p {
   font-size: 22px;
   color: #EBF304;
-  font-weight: 100;
+  font-weight: 300;
   text-transform: uppercase;
 }
 section.wins .win-stat p:last-child {
@@ -12769,7 +12887,7 @@ section.blue {
 section.blue h4 {
   text-align: right;
   font-size: 44px;
-  font-weight: 100;
+  font-weight: 300;
   margin-bottom: 5px;
   color: #666;
 }
@@ -12839,7 +12957,7 @@ section.halfhalfblue .heading-wrap {
 section.halfhalfblue .heading-wrap p {
   color: #057382;
   font-size: 20px;
-  font-weight: 100;
+  font-weight: 300;
   margin-bottom: 0;
   text-align: right;
 }
@@ -12872,7 +12990,7 @@ section.green {
 section.green h4 {
   text-align: rleft;
   font-size: 44px;
-  font-weight: 100;
+  font-weight: 300;
   margin-bottom: 25px;
   color: #057382;
   text-transform: uppercase;
@@ -12925,7 +13043,7 @@ section.pain {
 }
 section.pain h4 {
   font-size: 44px;
-  font-weight: 100;
+  font-weight: 300;
   color: #eee;
   margin-bottom: 45px;
 }
@@ -12991,11 +13109,22 @@ section.pain .info-box img {
 }
 
 .warning {
-  background: #ffdcdc;
-  border-radius: 12px;
+  background: #999999;
+  border-radius: 8px;
   padding: 15px;
+  text-align: left;
   margin-bottom: 15px;
   display: inline-block;
+  border-left: solid 6px #af2621;
+}
+.warning p.dewit {
+  color: #eeeeee;
+}
+.warning a.back-link {
+  color: #ffffff;
+}
+.warning a.back-link:hover {
+  color: #dddddd;
 }
 
 .h-440 {

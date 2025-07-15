@@ -45,50 +45,89 @@ p {
 
     strong {
         font-weight:700;
-        color:#444444;
+       
     }
 }
 h2 {
 
     color: $primary;
-    font-weight:100;
+    font-weight:300;
     font-size:42px;
     margin-bottom:30px;
   
 }
 h1 {
 
-    color: #666666;
-    font-weight:100;
-    font-size:40px;
+    color: #444444;
+    font-weight:900;
+    font-size:52px;
+    text-transform:uppercase;
 position:relative;
-font-family: $signature-font-family;
+font-family: $display-font-family;
+
+margin-bottom:25px;
 
 
-&:after {
+// &:after {
 
-    position: absolute;
-  bottom: -15px;
-  content: " ";
-  width:1px;
-  background:$primary;
-  height:110%;
-  left:355px;
-  right:0px;
+//     position: absolute;
+//   bottom: -15px;
+//   content: " ";
+//   width:1px;
+//   background:$primary;
+//   height:110%;
+//   left:475px;
+//   right:0px;
 
-  @media (max-width: 768px) { 
+//   @media (max-width: 768px) { 
 
-    display:none;
-  }
+//     display:none;
+//   }
 
-}
+// }
    
 
     span {
-        font-size:23px;
-        font-family: $display-font-family;
-        font-weight:300;
+        
+.rotating-text {
+   
+    font-weight: 300;
+ 
+ 
+    transform: translateY(20px);
+  
+    p {
+      display: inline-flex;
+      margin: 0;
+      vertical-align: top;
+      font-size: 26px;
+      text-transform:none;
+  
+      .word {
+        position: absolute;
+        display: flex;
+        opacity: 0;
+  
+        .letter {
+          transform-origin: center center 25px;
+  
+          &.out {
+            transform: rotateX(90deg);
+            transition: 0.32s cubic-bezier(0.6, 0, 0.7, 0.2);
+          }
+          &.in {
+            transition: 0.38s ease;
+          }
+          &.behind {
+            transform: rotateX(-90deg);
+          }
+        }
+      }
+    }
+  }
+  
 
+  
         
     }
 
@@ -107,6 +146,7 @@ font-family: $signature-font-family;
      
   
 }
+
 h3 {
 
     color: $primary;
@@ -149,11 +189,11 @@ li {
 }
 
 a.back-link {
-    color: #000000!important;
+    color: #000000;
     font-weight:700;
     text-decoration:underline;
 
     &:hover {
-        color: #666666!important;
+        color: #666666;
     }
 }
