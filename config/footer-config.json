@@ -1,0 +1,24 @@
+{
+  "heroImage": {
+    "src": "img/hero.png",
+    "alt": "Harry Nicholas"
+  },
+  "heading": "Let's create<br>something great",
+  "text": "Ready to bring your project to life? Get in touch and let's discuss how we can work together.",
+  "contact": [
+    {
+      "type": "email",
+      "icon": "svg",
+      "text": "harry.nicholas1996@gmail.com",
+      "action": "mailto:harry.nicholas1996@gmail.com"
+    },
+    {
+      "type": "linkedin",
+      "icon": "img/linkedin-w.svg",
+      "text": "My LinkedIn",
+      "action": "https://www.linkedin.com/in/harry-nicholas-14855a9a/"
+    }
+  ],
+  "copyright": "© 2026 Harry Nicholas. All rights reserved.",
+  "logoText": "harrynicholas"
+}

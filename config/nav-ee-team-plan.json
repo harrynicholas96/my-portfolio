@@ -1,0 +1,42 @@
+{
+  "logo": {
+    "text": "harrynicholas",
+    "href": "index.html"
+  },
+  "links": [
+    {
+      "text": "Overview",
+      "href": "#overview"
+    },
+    {
+      "text": "Problem",
+      "href": "#problem"
+    },
+    {
+      "text": "Solution",
+      "href": "#solution"
+    },
+    {
+      "text": "Design",
+      "href": "#design"
+    },
+    {
+      "text": "Impact",
+      "href": "#impact"
+    }
+  ],
+  "social": [
+    {
+      "type": "linkedin",
+      "icon": "img/linkedin.svg",
+      "alt": "LinkedIn",
+      "url": "https://www.linkedin.com/in/harry-nicholas-14855a9a/"
+    },
+    {
+      "type": "email",
+      "icon": "svg",
+      "alt": "Email",
+      "url": "mailto:harry.nicholas1996@gmail.com"
+    }
+  ]
+}
