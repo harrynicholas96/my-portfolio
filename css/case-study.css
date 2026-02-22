@@ -2,6 +2,16 @@
    CASE STUDY PAGE STYLES
    ======================================== */
 
+/* Carousel animation for lofi images */
+@keyframes scroll-carousel {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
 /* Enable custom cursor - Desktop only */
 @media (pointer: fine) {
     body {
@@ -288,6 +298,21 @@
     opacity: 1;
     transform: translateX(0);
     transition-delay: 0.56s;
+}
+
+/* Hide lofi carousel on desktop */
+.lofi-carousel-wrapper {
+    display: none;
+}
+
+/* Lofi carousel track - hidden by default, shown when JS ready */
+.lofi-carousel-track {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.lofi-carousel-track.ready {
+    opacity: 1;
 }
 
 /* Solution phone: scale in */
@@ -869,13 +894,20 @@ p.impact-description {
     }
 
     .problem-section .case-container {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
         gap: 40px;
     }
 
+    .problem-content {
+        order: 1;
+    }
+
     .stats-row {
+        order: 2;
         grid-template-columns: 1fr;
         max-width: 100%;
+        width: 100%;
     }
 
     .impact-stats {
@@ -890,6 +922,54 @@ p.impact-description {
 
     .insight-card {
         margin-bottom: 0;
+    }
+
+    /* Lofi carousel - small desktop/large tablet */
+    .solution-layout {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .lofi-carousel-wrapper {
+        display: block;
+        overflow: hidden;
+        padding: 0 0 40px;
+    }
+
+    .lofi-carousel-track {
+        display: flex;
+        gap: 12px;
+        width: max-content;
+        animation: scroll-carousel 30s linear infinite;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .lofi-carousel-track.ready {
+        opacity: 1;
+    }
+
+    .lofi-item {
+        flex-shrink: 0;
+        width: 100px;
+        height: auto;
+        position: relative;
+    }
+
+    .lofi-item img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        border-radius: 0;
+    }
+
+    /* Hide grid on small desktop */
+    .solution-grid {
+        display: none !important;
+    }
+
+    .solution-phone {
+        max-width: 300px;
     }
 }
 
@@ -993,17 +1073,49 @@ p.impact-description {
         height: 250px;
     }
 
-    /* Solution section - 4 lofi per row, wrapping to 2 rows, then phone below */
+    /* Solution section - carousel on tablet */
     .solution-layout {
         flex-direction: column;
         gap: 24px;
     }
 
-    .solution-grid {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 8px;
+    /* Lofi carousel - tablet */
+    .lofi-carousel-wrapper {
+        display: block;
+        overflow: hidden;
+        padding: 0 0 40px;
+    }
+
+    .lofi-carousel-track {
+        display: flex;
+        gap: 12px;
+        width: max-content;
+        animation: scroll-carousel 30s linear infinite;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .lofi-carousel-track.ready {
+        opacity: 1;
+    }
+
+    .lofi-item {
+        flex-shrink: 0;
+        width: 100px;
+        height: auto;
+        position: relative;
+    }
+
+    .lofi-item img {
         width: 100%;
-        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+        border-radius: 0;
+    }
+
+    /* Hide grid on tablet */
+    .solution-grid {
+        display: none !important;
     }
 
     .solution-phone {
@@ -1092,10 +1204,14 @@ p.impact-description {
     }
 
     /* Featured project hero section */
+    .featured-project {
+        padding-top: 80px !important;
+    }
+
     .featured-project-inner {
         flex-direction: column;
         gap: 32px;
-        padding: 30px 24px 30px;
+        padding: 0px 16px 30px;
     }
 
     .project-mockup {
@@ -1103,7 +1219,7 @@ p.impact-description {
     }
 
     .project-mockup img {
-        max-width: 280px;
+        max-width: 350px;
     }
 
     .project-title {
@@ -1180,14 +1296,53 @@ p.impact-description {
         font-size: 18px;
     }
 
-    /* Solution grid - 2 lofi per row on small screens */
+    /* Lofi carousel - mobile continuous auto-scroll */
+    .lofi-carousel-wrapper {
+        display: block;
+        overflow: hidden;
+        padding: 0 0 40px;
+    }
+
+    .lofi-carousel-track {
+        display: flex;
+        gap: 12px;
+        width: max-content;
+        animation: scroll-carousel 30s linear infinite;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .lofi-carousel-track.ready {
+        opacity: 1;
+    }
+
+    .lofi-item {
+        flex-shrink: 0;
+        width: 100px;
+        height: auto;
+        position: relative;
+    }
+
+    .lofi-item img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        border-radius: 0;
+    }
+
+    /* Hide grid on mobile */
     .solution-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 8px;
+        display: none !important;
     }
 
     .solution-phone {
-        max-width: 250px;
+        max-width: 100%;
+        margin-top: 24px;
+        text-align: center;
+    }
+
+    .solution-phone img {
+        max-width: 280px;
     }
 
     /* A/B testing */
@@ -1955,14 +2110,18 @@ p.impact-description {
 }
 
 @media (max-width: 480px) {
+    .featured-project {
+        padding-top: 80px !important;
+    }
+
     .ee-hero .featured-project-inner {
-        padding: 30px 24px 30px;
+        padding: 0px 16px 30px;
         gap: 24px;
     }
 
     .ee-mockup-group img {
         width: 100%;
-        max-width: 280px;
+        max-width: 350px;
     }
 
     .project-title {

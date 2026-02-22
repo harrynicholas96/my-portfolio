@@ -56,9 +56,11 @@
     }
 
     function initScrollAnimations() {
+        // Adjust rootMargin based on screen size - trigger earlier on mobile
+        const isMobile = window.innerWidth <= 768;
         const observerOptions = {
             threshold: 0.15,
-            rootMargin: '0px 0px -50px 0px'
+            rootMargin: isMobile ? '0px 0px 150px 0px' : '0px 0px -50px 0px'
         };
 
         const observer = new IntersectionObserver((entries) => {
@@ -169,4 +171,51 @@
         // Set initial active state
         updateActiveLink();
     }
+})();
+
+// Truly Infinite Lofi Carousel
+(function() {
+    const carouselTrack = document.querySelector('.lofi-carousel-track');
+    if (!carouselTrack) return;
+
+    // Remove CSS animation and set initial transform immediately
+    carouselTrack.style.animation = 'none';
+    carouselTrack.style.transform = 'translateX(0px)';
+
+    let position = 0;
+    const speed = 0.5; // pixels per frame
+    let animationStarted = false;
+
+    function animate() {
+        position += speed;
+
+        // Get the first item to check if we need to reset
+        const firstItem = carouselTrack.firstElementChild;
+        const itemWidth = firstItem.offsetWidth + 12; // item + gap
+
+        // When first item is completely off screen to the left,
+        // move it to the end and reset position
+        if (position >= itemWidth) {
+            position = position - itemWidth;
+
+            // Move element without triggering reflow/repaint flicker
+            // Use willChange to optimize the move
+            carouselTrack.style.willChange = 'transform';
+            carouselTrack.appendChild(firstItem);
+            carouselTrack.style.willChange = 'auto';
+        }
+
+        // Apply transform after any DOM changes
+        carouselTrack.style.transform = `translateX(-${position}px)`;
+
+        requestAnimationFrame(animate);
+    }
+
+    // Show immediately and start animation
+    carouselTrack.classList.add('ready');
+
+    // Start animation on next frame
+    requestAnimationFrame(() => {
+        animate();
+    });
 })();

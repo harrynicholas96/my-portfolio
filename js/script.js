@@ -265,9 +265,11 @@
     }
 
     function initScrollAnimations() {
+        // Adjust rootMargin based on screen size - trigger earlier on mobile
+        const isMobile = window.innerWidth <= 768;
         const observerOptions = {
             threshold: 0.15,
-            rootMargin: '0px 0px -100px 0px'
+            rootMargin: isMobile ? '0px 0px 100px 0px' : '0px 0px -100px 0px'
         };
 
         const observer = new IntersectionObserver((entries) => {

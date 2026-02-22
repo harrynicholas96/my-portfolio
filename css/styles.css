@@ -923,10 +923,6 @@ nav {
     animation: scroll-carousel 30s linear infinite;
 }
 
-.carousel-track:hover {
-    animation-play-state: paused;
-}
-
 .carousel-item {
     flex-shrink: 0;
     width: auto;
@@ -1091,6 +1087,14 @@ footer {
     line-height: 32px;
     color: #ffffff;
     text-decoration: underline;
+}
+
+/* Prevent browser auto-link detection from adding extra underlines */
+.contact-item a[href^="mailto:"],
+.contact-item a[href^="mailto:"]:hover,
+.contact-item a[href^="mailto:"]:visited {
+    text-decoration: none !important;
+    color: inherit;
 }
 
 .footer-bottom {
