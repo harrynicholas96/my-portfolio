@@ -182,11 +182,11 @@
 // Badge Text Rotation
 (function() {
     const taglines = [
-        'Senior Product Designer',
         'Design Thinker',
         'User Empath',
         'Visual Storyteller',
-        'UI Crafter'
+        'UI Crafter',
+        'Product Designer'
     ];
     let currentIndex = 0;
     const badgeText = document.querySelector('.badge-text');
