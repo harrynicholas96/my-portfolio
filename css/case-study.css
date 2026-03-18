@@ -155,6 +155,7 @@
 .tool-item img {
     height: 24px;
     width: auto;
+    object-fit: contain;
 }
 
 .tool-item.figma img {
@@ -166,8 +167,7 @@
 }
 
 .tool-item.mural img {
-    height: 42px !important;
-    width: auto !important;
+    height: 42px;
 }
 
 .tool-item.analytics img {
@@ -1019,8 +1019,34 @@ p.impact-description {
     }
 
     .tools-icons {
-        justify-content: center;
+        width: 100%;
+        justify-content: flex-start;
         flex-wrap: wrap;
+        gap: 20px 24px;
+    }
+
+    .tool-item {
+        flex: 0 0 auto;
+    }
+
+    .tool-item img {
+        height: 32px !important;
+    }
+
+    .tool-item.figma img {
+        height: 30px !important;
+    }
+
+    .tool-item.usertesting img {
+        height: 32px !important;
+    }
+
+    .tool-item.mural img {
+        height: 56px !important;
+    }
+
+    .tool-item.analytics img {
+        height: 42px !important;
     }
 
     .process-step {
@@ -2385,5 +2411,52 @@ p.impact-description {
         margin-left: 20px;
         margin-right: 20px;
         max-width: calc(100% - 40px);
+    }
+}
+
+/* Very narrow screens - 480px and below */
+@media (max-width: 480px) {
+    .tools-icons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 32px 24px;
+    }
+
+    /* Figma and UserTesting - natural sizing */
+    .tool-item.figma,
+    .tool-item.usertesting {
+        flex: 0 0 auto;
+    }
+
+    .tool-item.figma img {
+        height: 30px !important;
+        width: auto !important;
+    }
+
+    .tool-item.usertesting img {
+        height: 32px !important;
+        width: auto !important;
+    }
+
+    /* Mural and Adobe Analytics - force 100% width in columns */
+    .tool-item.mural,
+    .tool-item.analytics {
+        flex: 0 0 calc(50% - 12px);
+    }
+
+    .tool-item.mural img {
+        width: 60% !important;
+        height: auto !important;
+        max-width: 60% !important;
+        object-fit: contain !important;
+    }
+
+    .tool-item.analytics img {
+        width: 80% !important;
+        height: auto !important;
+        max-width: 80% !important;
+        object-fit: contain !important;
     }
 }

@@ -436,3 +436,31 @@
         updateActiveLink();
     }
 })();
+
+// Homepage Carousel Fix - Ensure animation starts on mobile
+(function() {
+    const carouselTrack = document.querySelector('.carousel-track');
+
+    if (carouselTrack) {
+        // Force reflow to ensure animation starts
+        function startCarousel() {
+            carouselTrack.style.animation = 'none';
+            void carouselTrack.offsetWidth; // Force reflow
+            carouselTrack.style.animation = 'scroll-carousel 30s linear infinite';
+        }
+
+        // Start on load
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', startCarousel);
+        } else {
+            startCarousel();
+        }
+
+        // Restart on page visibility change (mobile tab switching)
+        document.addEventListener('visibilitychange', function() {
+            if (!document.hidden) {
+                startCarousel();
+            }
+        });
+    }
+})();
