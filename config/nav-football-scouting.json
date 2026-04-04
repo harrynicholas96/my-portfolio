@@ -1,0 +1,46 @@
+{
+  "logo": {
+    "text": "harrynicholas",
+    "href": "./"
+  },
+  "links": [
+    {
+      "text": "Overview",
+      "href": "#overview"
+    },
+    {
+      "text": "Discovery",
+      "href": "#discovery"
+    },
+    {
+      "text": "Definition",
+      "href": "#definition"
+    },
+    {
+      "text": "Solution",
+      "href": "#solution"
+    },
+    {
+      "text": "Outcome",
+      "href": "#outcome"
+    },
+    {
+      "text": "Reflection",
+      "href": "#reflection"
+    }
+  ],
+  "social": [
+    {
+      "type": "linkedin",
+      "icon": "img/linkedin.svg",
+      "alt": "LinkedIn",
+      "url": "https://www.linkedin.com/in/harry-nicholas-14855a9a/"
+    },
+    {
+      "type": "email",
+      "icon": "svg",
+      "alt": "Email",
+      "url": "mailto:harry.nicholas1996@gmail.com"
+    }
+  ]
+}

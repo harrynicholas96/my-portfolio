@@ -1657,3 +1657,130 @@ footer.animate-in .footer-bottom {
         height: 160px;
     }
 }
+
+/* ========================================
+   FOOTBALL SCOUTING HOMEPAGE SECTION
+   Dark mode hero variant
+   ======================================== */
+
+.scouting-hero-homepage {
+    position: relative;
+    background: #0A0A0A;
+    padding: 120px 48px;
+    overflow: hidden;
+}
+
+.scouting-hero-homepage::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.8;
+    background: linear-gradient(135deg, #2D1F7A 0%, #251A5F 20%, #1D1447 35%, #160F32 50%, #0F0B20 65%, #0B0915 80%, #0A0A0A 95%, #0A0A0A 100%);
+    z-index: 0;
+}
+
+
+.scouting-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: rgba(81, 57, 232, 0.15);
+    border: 1px solid rgba(81, 57, 232, 0.5);
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.55px;
+    color: #7B68FF;
+    margin-bottom: 32px;
+    text-transform: uppercase;
+}
+
+.scouting-hero-homepage .project-title {
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 72px;
+    color: #FFFFFF;
+    margin-bottom: 32px;
+    letter-spacing: -1.68px;
+}
+
+.scouting-hero-homepage .project-description {
+    font-size: 24px;
+    line-height: 39px;
+    color: #B8B8B8;
+    margin-bottom: 32px;
+}
+
+.white-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 32px;
+    background: rgba(255, 255, 255, 0.8);
+    color: #0A0A0A;
+    border: none;
+    border-radius: 999px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+    transition: gap 0.5s cubic-bezier(0.25, 0.1, 0.25, 1), padding 0.5s cubic-bezier(0.25, 0.1, 0.25, 1), box-shadow 0.5s ease;
+}
+
+.white-button svg {
+    flex-shrink: 0;
+}
+
+.white-button:hover {
+    gap: 40px;
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.25);
+}
+
+.white-button:hover svg {
+    animation: nudge-right 0.8s ease-in-out infinite;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .scouting-hero-homepage .project-title {
+        font-size: 56px;
+        line-height: 56px;
+    }
+}
+
+@media (max-width: 768px) {
+    .scouting-hero-homepage {
+        padding: 80px 24px;
+    }
+
+    .scouting-hero-homepage .project-title {
+        font-size: 48px;
+        line-height: 48px;
+    }
+
+    .scouting-hero-homepage .project-description {
+        font-size: 20px;
+        line-height: 32px;
+    }
+}
+
+@media (max-width: 480px) {
+    .scouting-hero-homepage .project-title {
+        font-size: 36px;
+        line-height: 36px;
+    }
+
+    .scouting-hero-homepage .project-description {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .white-button {
+        width: 100%;
+        justify-content: center;
+    }
+}

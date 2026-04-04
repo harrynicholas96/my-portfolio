@@ -73,7 +73,7 @@
         }, observerOptions);
 
         // Observe all animatable content elements (excluding hero section and tools bar)
-        const elements = document.querySelectorAll('.case-container, .case-container-wide, .case-container-split, .insight-card, .process-step, .ab-card, .ab-phone, .impact-card, .solution-grid, .solution-phone, .solution-step, .outcome-card');
+        const elements = document.querySelectorAll('.case-container, .case-container-wide, .case-container-split, .insight-card, .process-step, .ab-card, .ab-phone, .impact-card, .solution-grid, .solution-phone, .solution-step, .outcome-card, .section-title-animate, .content-box-animate, .solution-item-animate, .learning-card-animate, .future-card-animate, .visual-placeholder-animate');
         elements.forEach(element => {
             observer.observe(element);
         });

@@ -8,6 +8,7 @@
     const isEEShop = window.location.pathname.includes('ee-business-shop');
     const isHub = window.location.pathname.includes('the-hub');
     const isEETeamPlan = window.location.pathname.includes('ee-team-plan');
+    const isScouting = window.location.pathname.includes('football-scouting');
     let configFile = 'config/nav-config.json';
 
     if (isEEShop) {
@@ -16,6 +17,8 @@
         configFile = 'config/nav-hub.json';
     } else if (isEETeamPlan) {
         configFile = 'config/nav-ee-team-plan.json';
+    } else if (isScouting) {
+        configFile = 'config/nav-football-scouting.json';
     }
 
     // Load navigation config and render
