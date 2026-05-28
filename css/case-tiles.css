@@ -1,0 +1,740 @@
+/* ============================================================
+   CASE STUDY TILES — Home page grid
+   Replaces the four full-width case study sections with a
+   compact 3-column tile layout matching the Figma design.
+   ============================================================ */
+
+.case-tiles {
+    padding: 0 48px 120px;
+    background: #ffffff;
+}
+
+.case-tiles-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    align-items: start;
+}
+
+/* Each column is a vertical stack of tiles */
+.case-tiles-column {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+/* Column 3: HN logo top, Mobile Manager bottom, space between */
+.case-tiles-column.col-logo-and-coming {
+    justify-content: space-between;
+    align-self: stretch;
+}
+
+/* ------------------------------------------------------------
+   Base tile
+   ------------------------------------------------------------ */
+.case-tile {
+    position: relative;
+    display: block;
+    width: 100%;
+    border-radius: 26px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1),
+                box-shadow 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+    isolation: isolate;
+}
+
+.case-tile.tile-tall {
+    aspect-ratio: 393 / 552;
+}
+
+.case-tile.tile-short {
+    aspect-ratio: 393 / 259;
+}
+
+/* ------------------------------------------------------------
+   Tile backgrounds (per-tile)
+   ------------------------------------------------------------ */
+.tile-ee-shop {
+    background: linear-gradient(125deg, #ecfdf5 0%, #f0fdfa 50%, #ecfeff 100%);
+}
+
+.tile-team-plan {
+    background: #fdfeec;
+}
+
+.tile-hub {
+    background: linear-gradient(146deg, #faf5ff 0%, #fdf2f8 50%, #fff1f2 100%);
+}
+
+.tile-scouting {
+    background: linear-gradient(180deg, #0c0922 0%, #0c0922 70%, #243588 100%);
+    color: #ffffff;
+}
+
+.tile-mobile-manager {
+    background: linear-gradient(146deg, #ecfdf5 0%, #f0fdfa 50%, #f0f0f0 100%);
+}
+
+/* ------------------------------------------------------------
+   Inner content
+   ------------------------------------------------------------ */
+.tile-inner {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    padding: 24px 28px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Brand mark (top-left) */
+.tile-brand {
+    width: 34px;
+    height: 34px;
+    object-fit: contain;
+    margin-bottom: 18px;
+    transition: transform 0.4s ease;
+}
+
+.tile-brand.tile-brand-tall {
+    width: 38px;
+    height: 38px;
+}
+
+.case-tile:hover .tile-brand {
+    transform: rotate(-6deg) scale(1.08);
+}
+
+/* Featured pill (top-right of EE Shop) */
+.tile-featured-pill {
+    position: absolute;
+    top: 22px;
+    right: 24px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 14px;
+    background: #009966;
+    color: #ffffff;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.55px;
+    text-transform: uppercase;
+    z-index: 4;
+}
+
+.tile-featured-pill .badge-dot {
+    width: 6px;
+    height: 6px;
+    background: #ffffff;
+    border-radius: 50%;
+}
+
+/* Coming soon pill (Mobile Manager) */
+.tile-coming-soon {
+    position: absolute;
+    bottom: 22px;
+    right: 24px;
+    padding: 4px 12px;
+    background: #ffffff;
+    border: 1.5px solid #f4f4f4;
+    border-radius: 14px;
+    font-family: 'Cairo', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: #444444;
+    z-index: 3;
+}
+
+/* Title */
+.tile-title {
+    font-family: 'Cairo', sans-serif;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -0.8px;
+    color: #0a0a0a;
+    margin: 0 0 18px;
+}
+
+.tile-tall .tile-title {
+    font-size: 34px;
+    max-width: 92%;
+}
+
+.tile-short .tile-title {
+    font-size: 32px;
+    margin-top: 4px;
+}
+
+.tile-scouting .tile-title {
+    color: #ededed;
+}
+
+/* Description */
+.tile-description {
+    font-family: 'Cairo', sans-serif;
+    font-size: 17px;
+    line-height: 1.45;
+    color: #364153;
+    margin: 0;
+    max-width: 90%;
+}
+
+.tile-tall .tile-description {
+    font-size: 18px;
+    line-height: 1.42;
+}
+
+.tile-scouting .tile-description {
+    color: #dddddd;
+}
+
+/* Arrow button (bottom-right) */
+.tile-arrow {
+    position: absolute;
+    bottom: 22px;
+    right: 24px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1),
+                box-shadow 0.4s ease;
+    z-index: 3;
+}
+
+.tile-arrow svg {
+    width: 22px;
+    height: 22px;
+    transform: rotate(-45deg);
+    transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.tile-arrow svg path {
+    stroke: #0a0a0a;
+}
+
+.tile-scouting .tile-arrow {
+    background: rgba(255, 255, 255, 0.92);
+}
+
+/* Hover effect on the arrow itself */
+.case-tile:hover .tile-arrow {
+    transform: scale(1.12);
+    background: #0a0a0a;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18),
+                0 0 15px 6px rgba(0, 153, 102, 0.3),
+                0 0 40px 12px rgba(0, 153, 102, 0.15),
+                0 0 70px 20px rgba(0, 153, 102, 0.08);
+}
+
+.case-tile:hover .tile-arrow svg path {
+    stroke: #ffffff;
+}
+
+.case-tile:hover .tile-arrow svg {
+    transform: rotate(0deg) translateX(2px);
+}
+
+/* ------------------------------------------------------------
+   Mockup images inside tall tiles
+   ------------------------------------------------------------ */
+.tile-mockup {
+    position: absolute;
+    pointer-events: none;
+    z-index: 1;
+    transition: transform 0.7s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+/* EE Shop — bg covers full tile, mockup confined to bottom half */
+.tile-ee-shop .tile-decor {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* EE Shop background image */
+.tile-ee-bg {
+    position: absolute;
+    top: 45%;
+    left: 0;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center top;
+    opacity: 0.4;
+}
+
+/* EE Shop iPhone — angled phone, bottom half, fills space below text */
+.tile-ee-shop .tile-mockup {
+    left: -15%;
+    bottom: 8%;
+    right: auto;
+    width: 130%;
+    transform: rotate(0deg);
+    filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.12));
+}
+
+.tile-ee-shop:hover .tile-mockup {
+    transform: translateY(-6px);
+}
+
+/* Scouting iPad — bottom-center */
+.tile-scouting .tile-mockup {
+    left: 3%;
+    bottom: 2%;
+    width: 94%;
+}
+
+.tile-scouting:hover .tile-mockup {
+    transform: translateY(-8px) scale(1.03);
+}
+
+/* ------------------------------------------------------------
+   Scattered page-thumbnail decoration (background of tall tiles)
+   Implemented as a pseudo-element pattern using existing images
+   ------------------------------------------------------------ */
+.tile-decor {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* EE Shop background image */
+.tile-ee-bg {
+    position: absolute;
+    top: 48%;
+    left: -10%;
+    width: 220%;
+    height: auto;
+    opacity: 0.4;
+}
+
+/* Hub background image — bottom-right, partially clipped */
+.tile-hub-bg {
+    position: absolute;
+    bottom: -30%;
+    right: -30%;
+    width: 90%;
+    height: auto;
+    opacity: 0.35;
+}
+
+.tile-decor span {
+    position: absolute;
+    width: 90px;
+    height: 120px;
+    border-radius: 3px;
+    background-size: cover;
+    background-position: center;
+    transform: rotate(-30deg) scaleY(0.87) skewX(30deg);
+    opacity: 0.22;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.tile-scouting .tile-decor span {
+    opacity: 0;
+}
+
+.tile-hub .tile-decor span {
+    width: 130px;
+    height: 86px;
+    opacity: 0.18;
+}
+
+/* ------------------------------------------------------------
+   HN logo decorative block
+   Outer block is static (holds the axis-aligned corner brackets).
+   Inner card rotates -15deg by default, straightens on hover.
+   ------------------------------------------------------------ */
+.tile-logo-block {
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    max-width: 290px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(-15deg);
+    opacity: 0;
+    transition: opacity 0.7s cubic-bezier(0.34, 1.56, 0.64, 1),
+                transform 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.tile-logo-block:hover {
+    transform: rotate(0deg);
+}
+
+.tile-logo-card {
+    position: relative;
+    width: 78%;
+    aspect-ratio: 1 / 1;
+    border-radius: 24px;
+    background: linear-gradient(135deg, #ffffff 0%, #e6fffa 100%);
+    box-shadow: 0 30px 50px rgba(1, 151, 130, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: box-shadow 0.6s ease;
+}
+
+.tile-logo-block:hover .tile-logo-card {
+    box-shadow: 0 36px 60px rgba(1, 151, 130, 0.55);
+}
+
+.tile-logo-card img {
+    width: 64%;
+    height: auto;
+    display: block;
+}
+
+/* Four corner brackets — axis-aligned on the outer block */
+.tile-logo-block::before,
+.tile-logo-block::after,
+.tile-logo-block > span::before,
+.tile-logo-block > span::after {
+    content: '';
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    border: 3px solid #019782;
+    border-radius: 2px;
+    pointer-events: none;
+}
+
+/* Top-left */
+.tile-logo-block::before {
+    top: 4%;
+    left: 4%;
+    border-right: none;
+    border-bottom: none;
+}
+
+/* Bottom-right */
+.tile-logo-block::after {
+    bottom: 4%;
+    right: 4%;
+    border-left: none;
+    border-top: none;
+}
+
+/* Span carries the other two corners */
+.tile-logo-block > span {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+/* Top-right */
+.tile-logo-block > span::before {
+    top: 4%;
+    right: 4%;
+    border-left: none;
+    border-bottom: none;
+}
+
+/* Bottom-left */
+.tile-logo-block > span::after {
+    bottom: 4%;
+    left: 4%;
+    border-right: none;
+    border-top: none;
+}
+
+/* ------------------------------------------------------------
+   Hover overlay — glass gradient + scrolling pills
+   ------------------------------------------------------------ */
+.tile-hover-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: linear-gradient(to bottom, rgba(217, 217, 217, 0) 0%, rgba(200, 200, 200, 0.45) 40%, rgba(160, 160, 160, 0.55) 100%);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border-radius: 0 0 26px 26px;
+    z-index: 4;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    pointer-events: none;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 20px;
+    padding-right: 70px;
+}
+
+.case-tile:hover .tile-hover-overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Pills carousel track */
+.tile-pills-track {
+    display: flex;
+    gap: 12px;
+    padding-left: 24px;
+    white-space: nowrap;
+    animation: pills-scroll 12s linear infinite;
+    animation-play-state: paused;
+}
+
+.case-tile:hover .tile-pills-track {
+    animation-play-state: running;
+}
+
+@keyframes pills-scroll {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.tile-pill {
+    flex-shrink: 0;
+    padding: 8px 16px;
+    background: #ffffff;
+    border-radius: 999px;
+    font-family: 'Cairo', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #364153;
+    letter-spacing: -0.15px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+/* Arrow sits above the overlay */
+.tile-arrow {
+    z-index: 5;
+}
+
+/* Scouting tile overlay — darker glass to suit the dark bg */
+.tile-scouting .tile-hover-overlay {
+    background: linear-gradient(to bottom, rgba(12, 9, 34, 0) 0%, rgba(12, 9, 34, 0.5) 40%, rgba(12, 9, 34, 0.7) 100%);
+}
+
+.tile-scouting .tile-pill {
+    background: rgba(255, 255, 255, 0.15);
+    color: #e0e0e0;
+}
+
+/* ------------------------------------------------------------
+   Hover lift on the tile itself
+   ------------------------------------------------------------ */
+.case-tile:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.14);
+}
+
+/* Per-tile playful hover flourishes */
+.tile-ee-shop:hover {
+    box-shadow: 0 18px 40px rgba(0, 153, 102, 0.22);
+}
+
+.tile-team-plan:hover {
+    box-shadow: 0 18px 40px rgba(235, 220, 50, 0.30);
+}
+
+.tile-hub:hover {
+    box-shadow: 0 18px 40px rgba(85, 20, 180, 0.18);
+}
+
+.tile-scouting:hover {
+    box-shadow: 0 18px 40px rgba(36, 53, 136, 0.45);
+}
+
+.tile-mobile-manager:hover {
+    box-shadow: 0 18px 40px rgba(0, 153, 102, 0.18);
+}
+
+/* Placeholder tile (Mobile Manager) — slightly muted, no link cursor */
+.case-tile.is-placeholder {
+    cursor: default;
+}
+
+.case-tile.is-placeholder:hover {
+    transform: translateY(-4px);
+}
+
+/* ------------------------------------------------------------
+   Entry animation — scroll-triggered, staggered
+   ------------------------------------------------------------ */
+.case-tile {
+    opacity: 0;
+    transform: translateY(40px) scale(0.96);
+    transition: opacity 0.7s cubic-bezier(0.34, 1.56, 0.64, 1),
+                transform 0.7s cubic-bezier(0.34, 1.56, 0.64, 1),
+                box-shadow 0.5s ease;
+}
+
+.case-tiles.animate-in .case-tile {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.case-tiles.animate-in .tile-logo-block {
+    opacity: 1;
+}
+
+/* Column-level stagger */
+.case-tiles.animate-in .case-tiles-column:nth-child(1) .case-tile:nth-child(1) { transition-delay: 0.05s; }
+.case-tiles.animate-in .case-tiles-column:nth-child(1) .case-tile:nth-child(2) { transition-delay: 0.20s; }
+.case-tiles.animate-in .case-tiles-column:nth-child(2) .case-tile:nth-child(1) { transition-delay: 0.12s; }
+.case-tiles.animate-in .case-tiles-column:nth-child(2) .case-tile:nth-child(2) { transition-delay: 0.28s; }
+.case-tiles.animate-in .case-tiles-column:nth-child(3) .tile-logo-block { transition-delay: 0.20s; }
+.case-tiles.animate-in .case-tiles-column:nth-child(3) .case-tile { transition-delay: 0.36s; }
+
+/* Keep hover transforms reactive after entry */
+.case-tiles.animate-in .case-tile {
+    transition: opacity 0.7s cubic-bezier(0.34, 1.56, 0.64, 1),
+                transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1),
+                box-shadow 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+/* For the tall scouting tile, override the scale-in transform so the
+   :hover transforms work cleanly after the entry finishes */
+.tile-scouting .tile-title {
+    color: #ededed;
+}
+
+/* ------------------------------------------------------------
+   Responsive
+   ------------------------------------------------------------ */
+@media (max-width: 1300px) {
+    .case-tiles-inner {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Hide the standalone logo block at this breakpoint */
+    .case-tiles-column.col-logo-and-coming .tile-logo-block {
+        display: none;
+    }
+
+    .tile-tall .tile-title {
+        font-size: 30px;
+    }
+    .tile-short .tile-title {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 850px) {
+    .case-tiles {
+        padding: 0 24px 80px;
+    }
+
+    .case-tiles-inner {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .case-tiles-column {
+        gap: 20px;
+        display: contents;
+    }
+
+    /* Desired order: EE Shop, Scouting, Hub, Team Plan, Mobile Manager */
+    .tile-ee-shop    { order: 1; }
+    .tile-scouting   { order: 2; }
+    .tile-hub        { order: 3; }
+    .tile-team-plan  { order: 4; }
+    .tile-mobile-manager { order: 5; }
+
+    .case-tile.tile-tall {
+        aspect-ratio: 393 / 480;
+    }
+
+    .case-tile.tile-short {
+        aspect-ratio: auto;
+        min-height: 240px;
+    }
+
+    .tile-tall .tile-title,
+    .tile-short .tile-title {
+        font-size: 30px;
+    }
+
+    .tile-description {
+        font-size: 16px;
+    }
+
+    .tile-tall .tile-description {
+        font-size: 17px;
+    }
+}
+
+/* Below 320px: drop aspect-ratio so tiles grow with content */
+@media (max-width: 320px) {
+    .case-tile.tile-tall,
+    .case-tile.tile-short {
+        aspect-ratio: unset;
+        min-height: 0;
+    }
+
+    .case-tile.tile-tall {
+        min-height: 380px;
+    }
+
+    .case-tile.tile-short {
+        min-height: 180px;
+    }
+
+    .tile-inner {
+        padding-bottom: 72px;
+    }
+}
+
+@media (max-width: 511px) {
+    .tile-ee-shop .tile-mockup {
+        display: none;
+    }
+
+    .tile-scouting .tile-mockup {
+        opacity: 0.33;
+    }
+}
+
+@media (max-width: 420px) {
+    .tile-inner {
+        padding: 20px 22px;
+    }
+
+    .tile-tall .tile-title,
+    .tile-short .tile-title {
+        font-size: 26px;
+    }
+
+    .tile-featured-pill {
+        font-size: 10px;
+        padding: 6px 10px;
+        top: 18px;
+        right: 18px;
+    }
+
+    .tile-arrow {
+        width: 40px;
+        height: 40px;
+        bottom: 18px;
+        right: 18px;
+    }
+}

@@ -41,20 +41,20 @@
     <!-- Discovery Section -->
     <section class="scouting-section" id="discovery">
         <div class="section-container">
-            <h2 class="section-title section-title-animate">Discovery & Strategic Framing</h2>
+            <h2 class="section-title section-title-animate">Discovery & Defining the Problem</h2>
 
             <div class="discovery-content-box content-box-animate">
-                <p class="lead-text">Professional football scouting relies on rapid, high-stakes decision-making—yet scouts were operating across disconnected tools with inconsistent evaluation frameworks. The business challenge wasn't just improving workflows; it was about <strong>enabling faster, more defensible recruitment decisions</strong> that could influence multi-million-pound player acquisitions.</p>
+                <p class="lead-text">Professional football scouts often work in fast-moving, high-pressure environments, but many were still relying on fragmented tools and inconsistent reporting methods. Notes were spread across Whatsapp & Slack messages, spreadsheets, and handwritten documents, making it difficult to compare players consistently or quickly share insights with recruitment teams.</p>
 
                 <ul>
-                    <li><strong>Uncovered critical workflow pain points</strong> through contextual interviews with scouts operating in live match environments—discovering that fragmented note-taking and inconsistent reporting created friction in time-sensitive decision windows</li>
-                    <li><strong>Identified strategic positioning opportunity</strong> by analysing competitor platforms —recognising that whilst they excelled at data depth, they underserved the mobile, in-the-moment reporting needs of field scouts</li>
-                    <li><strong>Aligned stakeholders on success metrics</strong> by facilitating working sessions with CEO and Sporting Director—establishing that "consolidation of tools" and "improved report consistency" were the measurable indicators of platform value</li>
+                    <li>To better understand the workflow, I spoke directly with scouts and observed how they captured and reviewed information during and after matches. One recurring theme was that existing tools often felt <strong>too slow or too rigid</strong> for live scouting environments. Scouts needed to record observations quickly, stay focused on the game, and trust that the system would support rather than interrupt their process.</li>
+                    <li>I also reviewed competitor platforms and noticed that while many offered deep data and analytics capabilities, they were often designed around <strong>desktop-heavy workflows rather than the realities of in-the-moment reporting</strong>. This helped shape an opportunity for Blue Crow to focus on speed, usability, and <strong>mobile-first workflow support</strong>.</li>
+                    <li>Working closely with the CEO and Sporting Director, we aligned early on what success would look like for the first version of the product. The focus wasn’t on building every possible feature, but on <strong>reducing fragmentation, improving report consistency,</strong> and creating a workflow scouts would genuinely want to use regularly.</li>
                 </ul>
 
                 <div style="margin-top: 32px;">
                     <p class="insight-label">Key Insight</p>
-                    <p class="insight-quote">"Scouts needed a tool they could trust in the 90th minute of a match—not a complex system that required desk time to operate effectively."</p>
+                    <p class="insight-quote">"Scouts needed a tool that supported quick, confident decision-making during live matches — not a system that added friction or pulled attention away from the game."</p>
                 </div>
             </div>
         </div>
@@ -63,10 +63,12 @@
     <!-- Problem Definition Section -->
     <section class="scouting-section gray-bg" id="definition">
         <div class="section-container">
-            <h2 class="section-title section-title-animate">Problem Definition & Strategic Trade-offs</h2>
+            <h2 class="section-title section-title-animate">Defining the MVP & Making Trade-offs</h2>
 
             <div class="definition-content-box content-box-animate">
-                <p class="lead-text">The challenge was scoping an MVP that delivered immediate value without overbuilding. With limited engineering capacity and aggressive launch timelines, I needed to <strong>identify the minimum viable experience</strong> that would genuinely change scout behaviour—not just digitise existing processes.</p>
+                <p class="lead-text">One of the biggest challenges was deciding what <i>not</i> to build.</p>
+                 <p class="lead-text">There were plenty of ideas early on — video analysis, deeper player comparisons, predictive scoring — but with a small engineering team and tight timelines, the priority was creating something scouts would actually adopt in their day-to-day workflow as quickly as possible.</p>
+                  <p class="lead-text">From research, it became clear that speed and usability during live matches mattered more than feature depth. Scouts needed to quickly capture observations, structure reports consistently, and avoid duplicating work across multiple tools.</p>
 
                 <div class="priority-grid">
                     <div class="priority-column prioritized">
@@ -88,8 +90,9 @@
                 </div>
 
                 <div class="additional-note">
-                    <p><strong>Advocated for a flexible evaluation framework</strong> rather than rigid templates—recognising that different scouting philosophies required adaptability whilst still maintaining cross-team comparability</p>
-                    <p><strong>Defined a clear North Star vision</strong> (integrated video analysis, predictive insights) whilst protecting the team from scope creep—ensuring we could ship a functional, valuable product within constraints</p>
+                    <p>We deliberately avoided overcomplicating the first release. Features like video annotation, advanced analytics, and third-party data integrations were valuable, but they introduced significant complexity without solving the core adoption problem.</p>
+                    <p>A key product decision was avoiding rigid evaluation templates. Different scouts naturally assessed players in different ways, so instead of forcing a single methodology, I pushed for a more <strong>flexible structure</strong> that still allowed reports to remain comparable across the organisation.</p>
+                    <p>Rather than trying to build the complete long-term vision immediately, the focus was on shipping a product that felt useful, lightweight, and reliable enough to become part of a scout’s real matchday workflow.</p>
                 </div>
             </div>
         </div>
@@ -98,61 +101,99 @@
     <!-- Solution Section -->
     <section class="scouting-section" id="solution">
         <div class="section-container">
-            <h2 class="section-title section-title-animate">Solution & Design Decisions</h2>
+            <h2 class="section-title section-title-animate">Key Product & UX Decisions</h2>
 
             <div class="solution-content-box content-box-animate">
-                <p class="lead-text">Rather than building a feature-heavy platform, I focused on <strong>removing friction from critical moments</strong>—ensuring scouts could capture insights quickly, consistently, and without cognitive overhead.</p>
+                <p class="lead-text">Rather than trying to build a feature-heavy scouting platform from day one, the focus was on simplifying the parts of the workflow scouts used most often. A lot of the design work came down to reducing friction — helping users capture information quickly, structure reports consistently, and stay focused during live matches.</p>
 
                 <div class="solution-list">
                     <div class="solution-item solution-item-animate">
-                        <div class="solution-number">1</div>
+                        <div class="solution-number">
+                            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="4" y1="21" x2="4" y2="14"></line>
+                                <line x1="4" y1="10" x2="4" y2="3"></line>
+                                <line x1="12" y1="21" x2="12" y2="12"></line>
+                                <line x1="12" y1="8" x2="12" y2="3"></line>
+                                <line x1="20" y1="21" x2="20" y2="16"></line>
+                                <line x1="20" y1="12" x2="20" y2="3"></line>
+                                <line x1="1" y1="14" x2="7" y2="14"></line>
+                                <line x1="9" y1="8" x2="15" y2="8"></line>
+                                <line x1="17" y1="16" x2="23" y2="16"></line>
+                            </svg>
+                        </div>
                         <div class="solution-content">
-                            <h3>Simplified Evaluation Framework</h3>
-                            <p>Designed a structured yet flexible assessment model that balanced standardisation with individual scouting styles. This wasn't about imposing rigid criteria—it was about <strong>creating a shared language</strong> that enabled meaningful comparison across reports.</p>
-                            <p class="impact-note">Impact: Reduced report completion time and improved cross-team consistency without sacrificing evaluator judgement.</p>
+                            <h3>Simplifying Player Evaluation</h3>
+                            <p>One challenge was designing a reporting structure that felt consistent across the organisation without becoming too restrictive for individual scouts.</p>
+                            <p>Different scouts naturally had different ways of assessing players, so instead of forcing a rigid scoring system, I designed a more <strong>flexible evaluation framework</strong> that still made reports easier to compare across teams.</p>
+                            <p class="impact-note">Impact: Created a more consistent reporting structure while still allowing scouts to work in a way that felt natural to them.</p>
                         </div>
                     </div>
 
                     <div class="solution-item solution-item-animate">
-                        <div class="solution-number">2</div>
+                        <div class="solution-number">
+                            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 3c-1.2 5.4-4 7.8-9 9 5 1.2 7.8 4 9 9 1.2-5 4-7.8 9-9-5-1.2-7.8-4-9-9z"></path>
+                                <path d="M6 6c-.7 2.5-2 3.7-4 4 2 .7 3.3 2 4 4 .7-2 2-3.3 4-4-2-.7-3.3-2-4-4z"></path>
+                            </svg>
+                        </div>
                         <div class="solution-content">
                             <h3>AI-Assisted Design Workflow</h3>
-                            <p>Integrated AI tooling into the design workflow to bridge the gap between conceptual design and implementation—using AI-generated prototypes as conversation starters with developers whilst maintaining control through Figma refinements. This approach accelerated early-stage exploration and produced artefacts that were inherently more code-friendly, streamlining handoff and reducing interpretation overhead.</p>
-                            <p class="impact-note">Impact: Compressed design iteration cycles and reduced developer interpretation time by delivering prototypes that aligned more closely with code structure.</p>
+                           <p>During the project, I started incorporating AI tools into parts of the design workflow to speed up early exploration and communication with developers.
+                            <p>I used AI-assisted prototyping to quickly test ideas, generate rough interaction concepts, and create starting points for technical discussions before refining everything properly in Figma. It helped reduce time spent on repetitive setup work and made early collaboration with engineering more efficient.</p>
+                           </p>
+                            <p class="impact-note">Impact: Faster iteration cycles and clearer conversations between design and development during early-stage feature exploration.</p>
                         </div>
                     </div>
 
                     <div class="solution-item solution-item-animate">
-                        <div class="solution-number">3</div>
+                        <div class="solution-number">
+                            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="17 1 21 5 17 9"></polyline>
+                                <path d="M3 11V9a4 4 0 0 1 4-4h14"></path>
+                                <polyline points="7 23 3 19 7 15"></polyline>
+                                <path d="M21 13v2a4 4 0 0 1-4 4H3"></path>
+                            </svg>
+                        </div>
                         <div class="solution-content">
-                            <h3>Iterative Grading System</h3>
-                            <p>Introduced a grading mechanism designed to evolve based on real usage patterns. By acknowledging that initial assumptions might be wrong, I <strong>built in the ability to iterate</strong> the rating scales post-launch without requiring system redesign.</p>
-                            <p class="impact-note">Impact: Enabled product evolution based on behavioural data, not just stated preferences.</p>
+                            <h3>Designing for Iteration Rather Than Perfection</h3>
+                            <p>Early on, it became clear that some assumptions around grading and reporting would only really be validated once scouts started using the product regularly.</p>
+                            <p>Because of that, I designed the grading structure to be relatively easy to adjust post-launch rather than treating the first version as something fixed and final.</p>
+                            <p class="impact-note">Impact: Allowed the product to evolve more naturally based on real usage and feedback after launch.</p>
                         </div>
                     </div>
 
                     <div class="solution-item solution-item-animate">
-                        <div class="solution-number">4</div>
+                        <div class="solution-number">
+                            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+                            </svg>
+                        </div>
                         <div class="solution-content">
-                            <h3>Product Delivery & Scope Management</h3>
-                            <p>Acted as the bridge between design, engineering, and leadership—prioritising ruthlessly to maintain velocity whilst protecting against feature bloat. This involved <strong>saying no to well-intentioned additions</strong> that would delay launch without proportional value.</p>
-                            <p class="impact-note">Impact: Shipped MVP on schedule with zero major scope compromises.</p>
+                            <h3>Managing Scope &amp; Priorities</h3>
+                            <p>With a small team and limited engineering capacity, prioritisation became a major part of the process.</p>
+                            <p>There were plenty of ideas we could have added, but I worked closely with stakeholders and developers to stay focused on the core workflow problems that would have the biggest impact for launch. In practice, this often meant pushing back on features that added complexity without solving an immediate user need.</p>
+                            <p class="impact-note">Impact: Delivered a focused MVP that solved core workflow problems without delaying launch through unnecessary feature expansion.</p>
                         </div>
                     </div>
 
                     <div class="solution-item solution-item-animate">
-                        <div class="solution-number">5</div>
+                        <div class="solution-number">
+                            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2v-4M9 21H5a2 2 0 0 1-2-2v-4m0 0h18"></path>
+                            </svg>
+                        </div>
                         <div class="solution-content">
-                            <h3>Early Validation & Iteration</h3>
-                            <p>Conducted rapid usability testing with scouts during development, incorporating feedback into design iterations. Rather than waiting for a polished prototype, I <strong>tested low-fidelity concepts early</strong> to validate core interaction patterns before committing engineering resources.</p>
-                            <p class="impact-note">Impact: Caught critical usability issues pre-build, reducing post-launch rework.</p>
+                            <h3>Testing Early Concepts Quickly</h3>
+                            <p>Rather than waiting for polished designs, I tested rough concepts and interaction ideas with scouts throughout development to validate whether workflows felt intuitive in real-world usage.</p> 
+                            <p>This helped identify usability issues early and gave the team more confidence in design decisions before committing engineering effort.</p>
+                            <p class="impact-note">Impact: Reduced uncertainty during development and improved confidence in the core interaction patterns before launch.</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="design-principle">
                     <p class="principle-label">Design Principle</p>
-                    <p class="principle-quote">"Every design decision was evaluated against one question: <em>Does this help a scout make a better decision, faster?</em> If the answer was unclear, we didn't build it."</p>
+                    <p class="principle-quote"><strong>Every design decision came back to one question: would this make scouting workflows quicker, clearer, and easier to use in real match situations?</strong></p>
                 </div>
             </div>
         </div>
@@ -164,50 +205,73 @@
             <h2 class="section-title">Outcome & Impact</h2>
 
             <div class="outcome-intro">
-                <p class="lead-text">Successfully launched an MVP that consolidated fragmented workflows, improved evaluation consistency, and created a platform architecture ready for future product evolution—all delivered under significant time and resource constraints.</p>
+                <p class="lead-text">The first version of the platform successfully brought together parts of the scouting workflow that had previously been spread across multiple tools and formats. Rather than trying to solve everything at once, the focus was on creating a lightweight, usable system that scouts could realistically adopt within their day-to-day work</p>
+                <p class="lead-text">The launch established a clearer and more consistent approach to player reporting while also giving the team a much stronger understanding of how scouts actually wanted to use the platform in practice.</p>
             </div>
 
             <div class="impact-grid">
                 <div class="impact-card">
                     <div class="impact-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                        <!-- Rocket: MVP launch -->
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4.5 16.5c-1.5 1.5-1.5 3.5 0 5 1.5 1.5 3.5 1.5 5 0L12 19l-2.5-2.5-5 0z"></path>
+                            <path d="M12 8L9.5 5.5C12 2 17 2 22 2c0 5-2 10-5.5 12.5L14 12"></path>
+                            <path d="M9.5 14.5 L14 10"></path>
                         </svg>
                     </div>
-                    <h3>MVP Launched</h3>
-                    <p>Shipped a focused product solving core scouting problems without feature bloat</p>
+                    <h3>Launched a focused MVP</h3>
+                    <p>Delivered a usable first version centred around core scouting workflows rather than unnecessary feature depth.</p>
                 </div>
                 <div class="impact-card">
                     <div class="impact-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                            <circle cx="9" cy="7" r="4"></circle>
-                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        <!-- Merge: consolidating fragmented workflow -->
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="18" cy="18" r="3"></circle>
+                            <circle cx="6" cy="6" r="3"></circle>
+                            <path d="M6 21V9a9 9 0 0 0 9 9"></path>
                         </svg>
                     </div>
-                    <h3>True Reduction in Tools</h3>
-                    <p>Consolidated previously fragmented workflows into single platform, eliminating context-switching</p>
+                    <h3>Reduced workflow fragmentation</h3>
+                    <p>Helped consolidate notes, evaluations, and reporting into a more structured and consistent experience.</p>
                 </div>
                 <div class="impact-card">
                     <div class="impact-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                            <polyline points="14 2 14 8 20 8"></polyline>
-                            <line x1="16" y1="13" x2="8" y2="13"></line>
-                            <line x1="16" y1="17" x2="8" y2="17"></line>
-                            <polyline points="10 9 9 9 8 9"></polyline>
+                        <!-- Clipboard check: consistent reports -->
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"></path>
+                            <rect x="9" y="3" width="6" height="4" rx="1"></rect>
+                            <polyline points="9 12 11 14 15 10"></polyline>
                         </svg>
                     </div>
-                    <h3>Scalable Architecture</h3>
-                    <p>Built product foundation enabling future enhancements (video integration, advanced analytics) without architectural rewrites</p>
+                    <h3>Improved reporting consistency</h3>
+                    <p>Created a shared reporting structure that made player evaluations easier to compare across scouts and teams.</p>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <!-- Layers: scalable foundation -->
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                            <polyline points="2 17 12 22 22 17"></polyline>
+                            <polyline points="2 12 12 17 22 12"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Created a scalable foundation</h3>
+                    <p>Designed workflows and systems flexible enough to support future additions like video analysis and deeper player insights.</p>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <!-- Compass: clearer product direction -->
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+                        </svg>
+                    </div>
+                    <h3>Clearer product direction</h3>
+                    <p>Real usage and feedback helped shape a much clearer understanding of which features and workflows were genuinely valuable to scouts.</p>
                 </div>
             </div>
 
-            <div class="outcome-detail">
-                <h4>Established product-market foundation for iteration</h4>
-                <p>Beyond the immediate deliverable, this project created organisational alignment on what "good scouting software" means—a shared understanding that didn't exist before. This clarity positioned the product for smarter iteration: we now knew what to build next because we'd validated core assumptions with real usage.</p>
-            </div>
+            
         </div>
     </section>
 
@@ -217,24 +281,24 @@
             <h2 class="section-title section-title-animate">Reflection & Key Learnings</h2>
 
             <div class="reflection-content-box content-box-animate">
-                <p class="lead-text">This project reinforced that senior product design isn't mostly about pixel-pushing or component libraries—it's about navigating ambiguity, making strategic trade-offs under constraints, and driving outcomes through clear thinking. A few specific learnings:</p>
+                <p class="lead-text">This project pushed me beyond just designing screens and into much more product-focused thinking. Because the team was small and timelines were tight, a lot of the work involved making practical decisions around scope, prioritisation, and balancing long-term ideas against what was realistically achievable for an MVP.</p>
 
                 <div class="learning-grid">
                     <div class="learning-card learning-card-animate">
-                        <h3>Strategic Navigation</h3>
-                        <p>Stakeholder alignment isn't a one-time kickoff activity—it's continuous work. Executives, engineers, and users all have evolving (and sometimes conflicting) expectations. I learnt to maintain consistent communication loops and use research insights to guide prioritisation debates, not just design decisions.</p>
+                        <h3>Working Through Ambiguity</h3>
+                        <p>This project pushed me beyond pure UX execution and into much more product-focused decision making. Because the product direction was still evolving, a big part of the role involved helping shape priorities, defining what the MVP should realistically include, and creating clarity across stakeholders with different expectations.</p>
                     </div>
                     <div class="learning-card learning-card-animate">
-                        <h3>Constraints Drive Focus</h3>
-                        <p>Limited time and engineering capacity weren't just obstacles—they forced ruthless clarity about what actually mattered. By explicitly accepting what we couldn't build in MVP, I protected the user experience for what we could ship. Constraints, properly managed, produce better products than unlimited resources.</p>
+                        <h3>The Value of Constraints</h3>
+                        <p>Limited engineering capacity and tight timelines forced the team to stay focused on the workflows that mattered most. In practice, this meant saying no to features that sounded exciting but didn’t meaningfully improve the core scouting experience. Looking back, keeping the scope tighter helped create a more usable and coherent first release.</p>
                     </div>
                     <div class="learning-card learning-card-animate">
-                        <h3>Product-Minded Design</h3>
-                        <p>Every interface decision has implications beyond aesthetics: engineering complexity, user adoption friction, future maintenance costs. I learnt to evaluate design choices not just on "does this feel good?" but on "is this the right trade-off given our constraints?" Design decisions are product decisions.</p>
+                        <h3>Designing Beyond the Interface</h3>
+                        <p>One of the biggest learnings was recognising that many important design decisions weren’t really visual decisions at all. They were trade-offs between usability, technical feasibility, adoption, and delivery timelines. Working closely with engineering throughout the project helped me think much more holistically about how product decisions affect implementation, maintenance, and long-term scalability.</p>
                     </div>
                     <div class="learning-card learning-card-animate">
-                        <h3>Design-as-Translation</h3>
-                        <p>My job wasn't "make it look nice"—it was translating business goals, user needs, and technical constraints into a coherent product strategy, then designing interfaces that executed on that strategy. The visual design was important, but it was in service of a larger translation challenge.</p>
+                        <h3>Aligning Teams Around a Product Vision</h3>
+                        <p>The project also reinforced how important communication and alignment are within smaller product teams. Regular conversations with scouts, developers, and leadership helped keep the product grounded in real workflows while ensuring the team stayed aligned on what problems we were actually trying to solve.</p>
                     </div>
                 </div>
             </div>
@@ -245,20 +309,21 @@
     <section class="scouting-section gray-bg" id="closing">
         <div class="section-container">
             <div class="closing-content">
-                <h2 class="section-title section-title-animate">Future Reasoning (If I Started Again)</h2>
+                <h2 class="section-title section-title-animate">If I Started Again</h2>
 
                 <div class="future-grid">
+                    
                     <div class="future-card future-card-animate">
-                        <h4>Earlier quantitative tracking</h4>
-                        <p>Whilst qualitative research drove the strategy, I'd instrument analytics earlier to catch usage patterns we couldn't observe in interviews—particularly around grading consistency and report completion rates.</p>
-                    </div>
-                    <div class="future-card future-card-animate">
-                        <h4>Broader stakeholder testing</h4>
-                        <p>We validated heavily with scouts but less with the recruitment directors who consume their reports. Earlier testing with "report consumers" might have surfaced different prioritisation insights.</p>
+                        <h4>Expanding Validation Beyond Scouts</h4>
+                        <p>A lot of the testing focused on the scouts creating reports, which made sense given they were the primary users. Looking back, involving recruitment staff and decision-makers earlier could have provided additional perspective on how reports were consumed downstream and may have influenced some prioritisation decisions differently.</p>
                     </div>
                     <div class="future-card future-card-animate">
                         <h4>Clearer roadmap communication</h4>
-                        <p>Saying "not in MVP" sometimes felt like saying "no forever." More explicit roadmap transparency—showing stakeholders what comes next and when—would have reduced friction around scope decisions.</p>
+                        <p>One challenge in a fast-moving MVP environment is that deprioritised features can sometimes feel like permanent rejections to stakeholders. In hindsight, being more explicit about what was deferred versus what was intentionally planned for later phases would probably have helped reduce some friction around scope decisions.</p>
+                    </div>
+                    <div class="future-card future-card-animate">
+                        <h4>Simplicity Was More Important Than Feature Depth</h4>
+                        <p>Early on, it was tempting to think about advanced features like video analysis or deeper player data integrations. But the reality was that the biggest problem wasn’t lack of functionality — it was workflow friction. Looking back, keeping the first version lightweight and usable was probably the right decision because adoption would have been much harder if the product felt too complex too early.</p>
                     </div>
                 </div>
             </div>

@@ -286,7 +286,7 @@
         }, observerOptions);
 
         // Observe content within sections instead of sections themselves (images remain static, only text animates)
-        const elements = document.querySelectorAll('.about-content, #work .project-content, .clients-grid');
+        const elements = document.querySelectorAll('.about-content, #work .project-content, .clients-grid, .case-tiles');
         elements.forEach(el => {
             // Check if element is already in viewport on page load
             const rect = el.getBoundingClientRect();

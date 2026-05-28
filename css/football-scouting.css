@@ -864,6 +864,210 @@ body.dark-mode .icon-24:hover {
     max-width: 400px;
 }
 
+/* ====== ACCESSIBILITY — bump low-contrast text ====== */
+
+/* #888888 on #0A0A0A was 3.9:1 — now #A0A0A0 at ~4.6:1+ */
+.solution-content-box .solution-content .impact-note {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #A3A3A3;
+    margin-top: 12px;
+    font-style: italic;
+}
+
+.solution-content-box .principle-label,
+.discovery-content-box .insight-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #A3A3A3;
+    margin-bottom: 16px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.placeholder-text {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #A3A3A3;
+    max-width: 400px;
+}
+
+/* Bump 15px body text to 16px for readability on dark */
+.impact-card p,
+.learning-card p,
+.future-card p,
+.reflection-content-box .learning-card p,
+.definition-content-box .priority-column ul li,
+.definition-content-box .additional-note p {
+    font-size: 16px;
+}
+
+/* ====== VISUAL ELEVATION ====== */
+
+/* Alternate section backgrounds for rhythm */
+.scouting-section.gray-bg {
+    background-color: #111111;
+}
+
+/* Subtle top border on each section for separation */
+.scouting-section + .scouting-section {
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+/* Solution items — add separator line and hover glow */
+.solution-content-box .solution-item {
+    padding: 28px 0;
+    border-bottom: 1px solid rgba(81, 57, 232, 0.12);
+    border-radius: 0;
+    transition: background 0.3s ease;
+}
+
+.solution-content-box .solution-item:first-child {
+    padding-top: 0;
+}
+
+.solution-content-box .solution-item:last-of-type {
+    border-bottom: none;
+}
+
+/* Solution icon boxes — add a subtle glow on hover */
+.solution-content-box .solution-number {
+    transition: box-shadow 0.4s ease, transform 0.4s ease;
+}
+
+.solution-content-box .solution-item:hover .solution-number {
+    box-shadow: 0 0 20px rgba(81, 57, 232, 0.35);
+    transform: scale(1.08);
+}
+
+/* Impact cards — hover glow */
+.impact-card {
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+.impact-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 40px rgba(107, 157, 255, 0.15);
+    border-color: rgba(107, 157, 255, 0.3);
+}
+
+.impact-card:hover .impact-icon svg {
+    filter: drop-shadow(0 0 8px rgba(107, 157, 255, 0.5));
+}
+
+/* Learning cards — coloured top accent bar */
+.reflection-content-box .learning-card {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.reflection-content-box .learning-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #10B981 0%, #059669 100%);
+    opacity: 0.6;
+}
+
+.reflection-content-box .learning-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(16, 185, 129, 0.12);
+}
+
+/* Future cards — accent bar + hover */
+.future-card {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.future-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #6B9DFF 0%, #5139E8 100%);
+    opacity: 0.5;
+}
+
+.future-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(107, 157, 255, 0.12);
+}
+
+/* Discovery & Definition boxes — more internal breathing room */
+.discovery-content-box,
+.definition-content-box,
+.solution-content-box,
+.reflection-content-box {
+    padding: 52px 52px;
+}
+
+/* Priority grid — visual cards instead of plain lists */
+.definition-content-box .priority-column {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+    padding: 28px;
+}
+
+.definition-content-box .priority-column.deferred {
+    border-color: rgba(107, 96, 96, 0.15);
+}
+
+.definition-content-box .priority-column.deferred h4 {
+    color: #8B8B8B;
+}
+
+/* Insight quote — styled callout */
+.discovery-content-box .insight-quote {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #D8D8D8;
+    font-style: italic;
+    border-left: 3px solid #5139E8;
+    padding-left: 20px;
+}
+
+/* Design principle callout — styled */
+.solution-content-box .principle-quote {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #D8D8D8;
+    border-left: 3px solid #5139E8;
+    padding-left: 20px;
+}
+
+/* Visual placeholder — slightly more visible dashed border */
+.visual-placeholder {
+    border-color: rgba(255, 255, 255, 0.2);
+    transition: border-color 0.3s ease;
+}
+
+.visual-placeholder:hover {
+    border-color: rgba(107, 157, 255, 0.35);
+}
+
+/* ====== RESPONSIVE overrides for new styles ====== */
+@media (max-width: 768px) {
+    .discovery-content-box,
+    .definition-content-box,
+    .solution-content-box,
+    .reflection-content-box {
+        padding: 32px 24px;
+    }
+
+    .definition-content-box .priority-column {
+        padding: 20px;
+    }
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
     .methodology-grid,

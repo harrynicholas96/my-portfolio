@@ -7,6 +7,7 @@
     <link rel="icon" type="image/svg+xml" href="img/hn.svg">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Emblema+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/case-tiles.css">
 </head>
 <body>
     <!-- Custom Cursor -->
@@ -122,10 +123,7 @@
 
     <!-- Case Studies Section -->
     <section id="work">
-        <div class="section-header">
-            <h2 class="main-title">UX/UI Case Studies</h2>
-            <p class="main-subtitle">Selected projects showcasing my design process</p>
-        </div>
+        
 
         <!-- Work Carousel -->
         <div class="carousel-wrapper">
@@ -145,117 +143,163 @@
                 <div class="carousel-item"><img src="img/project 6.png" alt="Project 6"></div>
             </div>
         </div>
-
-        <!-- Featured Project 1 -->
-        <div class="featured-project scroll-animate scale-in">
-            <div class="featured-project-inner">
-                <div class="project-content">
-                    <div class="featured-badge">
-                        <div class="badge-dot"></div>
-                        Featured Project
-                    </div>
-                    <h3 class="project-title">EE Business Shop</h3>
-                    <p class="project-description">
-                        Optimised mobile commerce through strategic UX research, A/B testing, and interface redesign — achieving 59% higher conversion rates.
-                    </p>
-                    <div class="tags">
-                        <span class="tag">E-commerce</span>
-                        <span class="tag">CRO</span>
-                        <span class="tag">Mobile-first</span>
-                    </div>
-                    <button class="black-button" onclick="window.location.href='ee-business-shop.html'">
-                        View case study
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M12 5L19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
-                </div>
-                <div class="project-mockup">
-                    <img src="img/Group 2147205782.png" alt="EE Business Shop mockup" class="phone-mockup">
-                </div>
-            </div>
-        </div>
-         <!-- Project 4 - Football Scouting Platform -->
-        <div class="featured-project scouting-hero-homepage scroll-animate scale-in">
-            <div class="featured-project-inner">
-                <div class="project-mockup" style="margin-left: -10%; margin-right: 0;">
-                    <img src="img/bc-app.png" alt="Football Scouting Platform mockup" style="max-width: 120%; height: auto;">
-                    <p style="font-size: 14px; color: #808080; margin-top: 16px; font-style: italic; text-align: center;">Due to client confidentiality, visuals have been hidden</p>
-                </div>
-                <div class="project-content">
-                    <div class="scouting-badge">DATA IN FOOTBALL</div>
-                    <h3 class="project-title">Professional Football Scouting Platform</h3>
-                    <p class="project-description">
-                        Led end-to-end product strategy and UX for a mobile-first platform that transformed how professional football clubs evaluate players.
-                    </p>
-
-                    <button class="white-button" onclick="window.location.href='football-scouting.html'">
-                        View case study
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M12 5L19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
-                </div>
-            </div>
+        <div class="section-header">
+            <h2 class="main-title">UX/UI Case Studies</h2>
+            <p class="main-subtitle">Selected projects showcasing my design process</p>
         </div>
 
-      
+        <!-- ============================================================
+             CASE STUDY TILES
+             3-column grid layout — replaces the previous full-width
+             case study sections.
+             ============================================================ -->
+        <div class="case-tiles">
+            <div class="case-tiles-inner">
 
-        <!-- Project 3 - EE Team Plan -->
-        <div class="project ee-team-plan-section scroll-animate slide-left" style="overflow: hidden;">
-            <div class="project-inner">
-                <div class="project-content">
-                    <h3 class="project-title">EE Team Plan Quotation Tool</h3>
-                    <p class="project-description">
-                       The Team Plan Calculator let users instantly build, customise, and save bulk mobile plan quotes online, reducing sales call reliance and streamlining the order process.
-                    </p>
-                    <div class="tags">
-                        <span class="tag-gray">Proof Of Concept</span>
-                        <span class="tag-gray">Bulk buy</span>
-                        <span class="tag-gray">Large Business</span>
-                    </div>
-                    <a href="ee-team-plan.html" class="black-button">
-                        View case study
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M12 5L19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
+                <!-- COLUMN 1 -->
+                <div class="case-tiles-column">
+
+                    <!-- EE Business Shop (tall, featured) -->
+                    <a class="case-tile tile-tall tile-ee-shop" href="ee-business-shop.html" aria-label="EE Business Shop case study">
+                        <div class="tile-decor" aria-hidden="true">
+                            <img class="tile-ee-bg" src="img/ee-tile-bg.png" alt="">
+                        </div>
+                        <span class="tile-featured-pill">
+                            <span class="badge-dot"></span>
+                            Featured Project
+                        </span>
+                        <div class="tile-inner">
+                            <img class="tile-brand tile-brand-tall" src="img/ee.png" alt="EE">
+                            <h3 class="tile-title">EE Business Shop</h3>
+                            <p class="tile-description">Optimised mobile commerce through strategic UX research, A/B testing, and interface redesign — achieving 159% higher conversion rates.</p>
+                        </div>
+                        <img class="tile-mockup" src="img/Group 2147205782.png" alt="">
+                        <span class="tile-arrow" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 12H19" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12 5L19 12L12 19" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                        <div class="tile-hover-overlay">
+                            <div class="tile-pills-track">
+                                <span class="tile-pill">E-commerce</span>
+                                <span class="tile-pill">CRO</span>
+                                <span class="tile-pill">Mobile-first</span>
+                                <span class="tile-pill">B2B</span>
+                                <span class="tile-pill">Interviews</span>
+                                <span class="tile-pill">Analytics</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Team Plan (short) -->
+                    <a class="case-tile tile-short tile-team-plan" href="ee-team-plan.html" aria-label="EE Team Plan Quotation Tool case study">
+                        <div class="tile-inner">
+                            <img class="tile-brand" src="img/ee.png" alt="EE" style="position: absolute; top: 22px; right: 24px; margin: 0;">
+                            <h3 class="tile-title">Team Plan <br>Quotation Tool</h3>
+                            <p class="tile-description">Users instantly build, customise, and save bulk mobile plan quotes online, reducing sales call reliance and streamlining the order process.</p>
+                        </div>
+                        <span class="tile-arrow" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 12H19" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12 5L19 12L12 19" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                        <div class="tile-hover-overlay">
+                            <div class="tile-pills-track">
+                                <span class="tile-pill">Proof Of Concept</span>
+                                <span class="tile-pill">Bulk buy</span>
+                                <span class="tile-pill">Large Business</span>
+                                <span class="tile-pill">Proof Of Concept</span>
+                                <span class="tile-pill">Bulk buy</span>
+                                <span class="tile-pill">Large Business</span>
+                            </div>
+                        </div>
                     </a>
                 </div>
-                <div class="ee-team-plan-image">
-                    <img src="img/Group 2147205785.png" alt="EE Team Plan mockup">
+
+                <!-- COLUMN 2 -->
+                <div class="case-tiles-column">
+
+                    <!-- The Hub (short) -->
+                    <a class="case-tile tile-short tile-hub" href="the-hub.html" aria-label="The Hub Launch case study">
+                        <div class="tile-decor" aria-hidden="true">
+                            <img class="tile-hub-bg" src="img/hub-bg.png" alt="">
+                        </div>
+                        <div class="tile-inner">
+                            <img class="tile-brand" src="img/bt.png" alt="BT">
+                            <h3 class="tile-title">'The Hub' Launch</h3>
+                            <p class="tile-description">Performance issues led BT Wholesale to launch The Hub — a streamlined, user-centred platform designed to simplify workflows and improve the experience.</p>
+                        </div>
+                        <span class="tile-arrow" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 12H19" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12 5L19 12L12 19" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                        <div class="tile-hover-overlay">
+                            <div class="tile-pills-track">
+                                <span class="tile-pill">Product launch</span>
+                                <span class="tile-pill">Migration</span>
+                                <span class="tile-pill">Dashboard</span>
+                                <span class="tile-pill">Product launch</span>
+                                <span class="tile-pill">Migration</span>
+                                <span class="tile-pill">Dashboard</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Football Scouting Platform (tall, dark) -->
+                    <a class="case-tile tile-tall tile-scouting" href="football-scouting.html" aria-label="Professional Football Scouting Platform case study">
+                        <div class="tile-inner">
+                            <img class="tile-brand tile-brand-tall" src="img/bluecrow-wh.png" alt="Blue Crow Sports">
+                            <h3 class="tile-title">Professional Football Scouting Platform</h3>
+                            <p class="tile-description">Led end-to-end product strategy and UX for a mobile-first platform that transformed how professional football clubs evaluate players.</p>
+                        </div>
+                        <img class="tile-mockup" src="img/bc-app.png" alt="">
+                        <span class="tile-arrow" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 12H19" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12 5L19 12L12 19" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                        <div class="tile-hover-overlay">
+                            <div class="tile-pills-track">
+                                <span class="tile-pill">Sports Technology</span>
+                                <span class="tile-pill">Mobile-first UX</span>
+                                <span class="tile-pill">Lead Product Designer</span>
+                                <span class="tile-pill">Sports Technology</span>
+                                <span class="tile-pill">Mobile-first UX</span>
+                                <span class="tile-pill">Lead Product Designer</span>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-            </div>
-        </div>
-  <!-- Featured Project 2 - The Hub -->
-        <div class="featured-project purple scroll-animate scale-in">
-            <div class="featured-project-inner">
-                <div class="project-mockup" style="margin-left: -10%; margin-right: 0;">
-                    <img src="img/iPad Pro 12.9-inch Space Gray Mockup.png" alt="Hub Launch mockup" style="max-width: 120%; height: auto;">
-                </div>
-                <div class="project-content">
-                    <div class="purple-badge">BT WHOLESALE</div>
-                    <h3 class="project-title">'The Hub' Launch</h3>
-                    <p class="project-description">
-                   Performance issues and usability challenges led BT Wholesale to launch The Hub — a streamlined, user-centred platform designed to simplify workflows and improve the experience.
-                    <div class="tags">
-                        <span class="tag">Product launch</span>
-                        <span class="tag">Migration</span>
-                        <span class="tag">Dashboard</span>
+
+                <!-- COLUMN 3 -->
+                <div class="case-tiles-column col-logo-and-coming">
+
+                    <!-- HN logo decorative block -->
+                    <div class="tile-logo-block" aria-hidden="true">
+                        <div class="tile-logo-card">
+                            <img src="img/hn-tile.svg" alt="">
+                        </div>
+                        <span></span>
                     </div>
-                    <button class="black-button" onclick="window.location.href='the-hub.html'">
-                        View case study
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M12 5L19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
+
+                    <!-- Mobile Manager (placeholder, no link) -->
+                    <div class="case-tile tile-short tile-mobile-manager is-placeholder" aria-label="Mobile Manager — coming soon">
+                        <div class="tile-inner">
+                            <img class="tile-brand" src="img/ee.png" alt="EE" style="position: absolute; top: 22px; right: 24px; margin: 0;">
+                            <h3 class="tile-title">Mobile Manager</h3>
+                            <p class="tile-description">Owned workflow improvements, accessibility auditing, and gradual UX modernisation while collaborating directly with external development teams.</p>
+                        </div>
+                        <span class="tile-coming-soon">Coming soon!</span>
+                    </div>
                 </div>
+
             </div>
         </div>
-       
 
         <!-- Clients Section -->
         <div class="clients-section scroll-animate fade-up">
